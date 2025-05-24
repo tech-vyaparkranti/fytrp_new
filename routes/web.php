@@ -9,22 +9,22 @@ use App\Http\Controllers\EnquiryFormController;
 
 Route::controller(HomeController::class)->group(function () {
 Route::get('/', 'index')->name('index');
-// Route::get('/index', 'index')->name('index');
-// Route::get('/index2', 'index2')->name('index2');
-// Route::get('/index3', 'index3')->name('index3');
+Route::get('/index', 'index')->name('index');
+Route::get('/index2', 'index2')->name('index2');
+Route::get('/index3', 'index3')->name('index3');
 Route::get('/about', 'about')->name('about');
 Route::get('/destinations','destination')->name('destination');
 Route::get('/hotels','hotels')->name('hotels');
 Route::get('/hotel-detsils/{slug}','hotelDetails')->name('hotelDetails');
 
-// Route::get('/destinationdetails','destinationdetails')->name('destinationdetails');
+Route::get('/destinationdetails','destinationdetails')->name('destinationdetails');
 Route::get("destination/{destination_slug}",[HomeController::class,"destinationDetailpage"])->name("destinationDetailpage");
 
 Route::get('/packages','tour')->name('tour');
-// Route::get('/tourdetails','tourdetails')->name('tourdetails');
+Route::get('/tourdetails','tourdetails')->name('tourdetails');
 Route::get("package/{slug}",[HomeController::class,"tourDetailpage"])->name("tourDetailpage");
 Route::get('/blogs','blog')->name('blog');
-// Route::get('/blogdetails','blogdetails')->name('blogdetails');
+Route::get('/blogdetails','blogdetails')->name('blogdetails');
 Route::get("blog/{slug}",[HomeController::class,"blogdetail"])->name("blogdetail");
 Route::get('/contact','contact')->name('contact');
 Route::get('/privacypolicy','privacypolicy')->name('privacypolicy');

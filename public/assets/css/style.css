@@ -5728,7 +5728,7 @@ hr {
   transform: scale(1.06);
 }
 .cs_team.cs_style_1 .cs_team_thumb {
-  border-radius: 133px;
+  border-radius: 5px;
     position: relative;
     max-width: 260px;
     max-height: 260px;
@@ -5739,7 +5739,7 @@ hr {
   width: 100%;
   height: 100%;
   background-color: rgba(16, 32, 57, 0.6);
-  border-radius: 50%;
+  border-radius: 5px;
   position: absolute;
   left: 0;
   top: 0;
@@ -6419,4 +6419,8 @@ a.footer-call {
   bottom: 80px;
   padding: 5px;
 }
+
+ .a {
+        text-decoration: none !important;
+      }
 /*# sourceMappingURL=style.css.map */
