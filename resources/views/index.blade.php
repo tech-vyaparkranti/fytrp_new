@@ -807,256 +807,10 @@
 
 
 
-{{-- updated new code start --}}
-
-{{-- updated old code --}}
-
-
-
-<!-- Start Package Section -->
-<section>
-  <div class="cs_height_135 cs_height_lg_75"></div>
-  <div class="container">
-    <div class="cs_section_heading cs_style_1 text-center">
-      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">CHOOSE YOUR PACKAGE</h3>
-      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Popular Tours Packages</h2>
-    </div>
-    <div class="cs_height_55 cs_height_lg_40"></div>
-  </div>
-  <div class="container">
-    <div class="row cs_gap_y_30">
-      <div class="col-lg-4">
-        <div class="cs_card cs_style_3 cs_white_bg">
-          <a href="{{ route('tourdetails') }}" class="cs_card_thumb position-relative cs_zoom">
-            <img src="assets/images/package_img_5.jpeg" alt="Package Thumb" class="cs_zoom_in">
-            <div class="cs_package_badge cs_fs_18 cs_semibold cs_primary_color cs_primary_font position-absolute">3 Day 2 Night</div>
-          </a>
-          <div class="cs_card_content">
-            <h2 class="cs_card_title cs_fs_24 cs_semibold"><a href="{{ route('tourdetails') }}">Beauty of Solomon Island</a></h2>
-            <p class="cs_card_subtitle mb-0"><i class="fa-solid fa-globe cs_accent_color"></i> Africa Portugal Mexico</p>
-            <hr>
-            <div class="cs_card_action">
-              <span class="cs_card_price cs_fs_24 cs_semibold cs_primary_color cs_primary_font mb-0">$4500</span>
-              <a href="{{ route('tourdetails') }}" class="cs_btn cs_style_1 cs_fs_18 cs_semibold"> Book Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="cs_card cs_style_3 cs_white_bg">
-          <a href="{{ route('tourdetails') }}" class="cs_card_thumb position-relative cs_zoom">
-            <img src="assets/images/package_img_6.jpeg" alt="Package Thumb" class="cs_zoom_in">
-            <div class="cs_package_badge cs_fs_18 cs_semibold cs_primary_color cs_primary_font position-absolute">3 Day 2 Night</div>
-          </a>
-          <div class="cs_card_content">
-            <h2 class="cs_card_title cs_fs_24 cs_semibold"><a href="{{ route('tourdetails') }}">Believe In Your Mexico</a></h2>
-            <p class="cs_card_subtitle mb-0"><i class="fa-solid fa-globe cs_accent_color"></i> New York City, USA</p>
-            <hr>
-            <div class="cs_card_action">
-              <span class="cs_card_price cs_fs_24 cs_semibold cs_primary_color cs_primary_font mb-0">$4500</span>
-              <a href="{{ route('tourdetails') }}" class="cs_btn cs_style_1 cs_fs_18 cs_semibold"> Book Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="cs_card cs_style_3 cs_white_bg">
-          <a href="{{ route('tourdetails') }}" class="cs_card_thumb position-relative cs_zoom">
-            <img src="assets/images/package_img_7.jpeg" alt="Package Thumb" class="cs_zoom_in">
-            <div class="cs_package_badge cs_fs_18 cs_semibold cs_primary_color cs_primary_font position-absolute">3 Day 2 Night</div>
-          </a>
-          <div class="cs_card_content">
-            <h2 class="cs_card_title cs_fs_24 cs_semibold"><a href="{{ route('tourdetails') }}">Proof That Bahamas Beaty</a></h2>
-            <p class="cs_card_subtitle mb-0"><i class="fa-solid fa-globe cs_accent_color"></i> Machu Picchu, Peru</p>
-            <hr>
-            <div class="cs_card_action">
-              <span class="cs_card_price cs_fs_24 cs_semibold cs_primary_color cs_primary_font mb-0">$4500</span>
-              <a href="{{ route('tourdetails') }}" class="cs_btn cs_style_1 cs_fs_18 cs_semibold"> Book Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="cs_height_140 cs_height_lg_80"></div>
-</section>
-<!-- End Package Section -->
-
-<!-- Start CTA Section -->
-<section class="cs_cta cs_style_1 cs_bg_filed cs_primary_bg cs_bg_fixed" data-src="assets/images/banner_bg_2.jpeg">
-  <div class="cs_height_150 cs_height_lg_80"></div>
-  <div class="container">
-    <div class="row cs_gap_y_40">
-      <div class="col-lg-6">
-        <div class="cs_cta_text">
-          <h3 class="cs_cta_title_mini cs_fs_24 cs_medium cs_white_color cs_ternary_font wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">27% DISCOUNT OFFER </h3>
-          <h2 class="cs_cta_title cs_fs_56 cs_bold cs_white_color">Discount Popup Examples to Elevate</h2>
-          <p class="cs_cta_subtitle cs_fs_18 cs_white_color">Denouncing pleasure and praising pain was born and will give you <br> complete great explorer of the truth the master-builder.</p>
-          <a href="" class="cs_btn cs_style_1 cs_fs_18 cs_semibold">
-            Read More
-            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.5866 5.69629H0.41235C0.184269 5.69629 0 5.46776 0 5.1849C0 4.90204 0.184269 4.67352 0.41235 4.67352H18.5906L16.0881 1.57004C15.927 1.37028 15.927 1.04587 16.0881 0.846109C16.2492 0.646349 16.5108 0.646349 16.6718 0.846109L19.8792 4.82374C19.9977 4.97076 20.0325 5.1897 19.9681 5.38147C19.9036 5.57164 19.7529 5.69629 19.5866 5.69629Z" fill="currentColor"/><path d="M16.3435 9.11986C16.2384 9.11986 16.1333 9.08012 16.0538 8.99935C15.8935 8.83909 15.8935 8.57884 16.0538 8.41858L19.2487 5.22371C19.4089 5.06345 19.6692 5.06345 19.8294 5.22371C19.9897 5.38396 19.9897 5.64422 19.8294 5.80448L16.6346 8.99935C16.5538 9.08012 16.4487 9.11986 16.3435 9.11986Z" fill="currentColor"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="cs_partners_wrap overflow-hidden">
-          <div class="cs_partners">
-            <div class="cs_partner">
-              <img src="assets/images/brand_6.png" alt="Brand Logo">
-            </div>
-            <div class="cs_partner">
-              <img src="assets/images/brand_7.png" alt="Brand Logo">
-            </div>
-            <div class="cs_partner">
-              <img src="assets/images/brand_8.png" alt="Brand Logo">
-            </div>
-            <div class="cs_partner">
-              <img src="assets/images/brand_9.png" alt="Brand Logo">
-            </div>
-            <div class="cs_partner">
-              <img src="assets/images/brand_10.png" alt="Brand Logo">
-            </div>
-            <div class="cs_partner">
-              <img src="assets/images/brand_11.png" alt="Brand Logo">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cs_height_150 cs_height_lg_80"></div>
-</section>
-<!-- End CTA Section -->
-
-<!-- Start Why Choose Us Section -->
-<section>
-  <div class="cs_height_135 cs_height_lg_75"></div>
-  <div class="container">
-    <div class="cs_section_heading cs_style_1 text-center">
-      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">Why Choose Us</h3>
-      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Get The Best Travel Experience</h2>
-    </div>
-    <div class="cs_height_55 cs_height_lg_40"></div>
-    <div class="cs_iconbox_4_wrap">
-      <div>
-        <div class="row cs_gap_y_45">
-          <div class="col-lg-12 col-6">
-            <div class="cs_iconbox cs_style_4">
-              <div class="cs_iconbox_icon cs_center">
-                <img src="assets/images/icons/calendar_icon_2.svg" alt="Calendar Icon">
-              </div>
-              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Set Travel Plan</h2>
-              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
-            </div>
-          </div>
-          <div class="col-lg-12 col-6">
-            <div class="cs_iconbox cs_style_4">
-              <div class="cs_iconbox_icon cs_center">
-                <img src="assets/images/icons/hotel-icon.svg" alt="Hotel Icon">
-              </div>
-              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Luxary Hotel</h2>
-              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="cs_iconbox_4_thumb cs_center">
-          <img src="assets/images/about_4.png" alt="About Thumb">
-        </div>
-      </div>
-      <div>
-        <div class="row cs_gap_y_45">
-          <div class="col-lg-12 col-6">
-            <div class="cs_iconbox cs_style_4">
-              <div class="cs_iconbox_icon cs_center">
-                <img src="assets/images/icons/compass_icon.svg" alt="Calendar Icon">
-              </div>
-              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Explore Around</h2>
-              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
-            </div>
-          </div>
-          <div class="col-lg-12 col-6">
-            <div class="cs_iconbox cs_style_4">
-              <div class="cs_iconbox_icon cs_center">
-                <img src="assets/images/icons/headset_icon.svg" alt="Hotel Icon">
-              </div>
-              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Support 24/7</h2>
-              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cs_height_135 cs_height_lg_75"></div>
-</section>
-<!-- End Why Choose Us Section -->
-
-<!-- Start Destination Section -->
-<section class="cs_accent_bg_1">
-  <div class="cs_height_135 cs_height_lg_75"></div>
-  <div class="container">
-    <div class="cs_section_heading cs_style_1">
-      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">POPULAR DESTINATION</h3>
-      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">Most Popular Destination</h2>
-    </div>
-    <div class="cs_height_55 cs_height_lg_40"></div>
-    <div class="cs_card_4_list">
-      <div class="cs_card cs_style_4 cs_hover_active active">
-        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2022/01/01/16/29/antelope-6908215_1280.jpg"></a>
-        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
-        <div class="cs_card_in">
-          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">Copenhagen,<br> Denmark</a></h2>
-        </div>
-      </div>
-      <div class="cs_card cs_style_4 cs_hover_active">
-        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2022/01/01/16/29/antelope-6908215_1280.jpg"></a>
-        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
-        <div class="cs_card_in">
-          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">California,<br> USA</a></h2>
-        </div>
-      </div>
-      <div class="cs_card cs_style_4 cs_hover_active">
-        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2025/02/09/12/19/lake-9394214_1280.jpg"></a>
-        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
-        <div class="cs_card_in">
-          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">Rome,<br> Italy</a></h2>
-        </div>
-      </div>
-      <div class="cs_card cs_style_4 cs_hover_active">
-        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2021/10/14/12/32/autumn-6708984_1280.jpg"></a>
-        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
-        <div class="cs_card_in">
-          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">London,<br> United Lingdom</a></h2>
-        </div>
-      </div>
-      <div class="cs_card cs_style_4 cs_hover_active">
-        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2025/01/01/14/48/bird-9303900_1280.jpg"></a>
-        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
-        <div class="cs_card_in">
-          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">Paris,<br> French</a></h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cs_height_140 cs_height_lg_80"></div>
-</section>
-<!-- End Destination Section -->
-
-
-{{-- updated old code end here --}}
-
-{{-- updated new code end  --}}
-
 
 {{-- package card start --}}
 
 
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> --}}
 
 <style>
     .tours-container {
@@ -1401,10 +1155,11 @@
     }
 </style>
 
+<section style="padding-top: 20px; padding-bottom: 10px;">
 <div class="tours-container">
     <div class="section-header">
         {{-- <h2 class="section-title">Browse Our Group Tours</h2> --}}
-        <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">Browse Our Group Tours</h3>
+        <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">BROWSE OUR GROUP TOURS </h3>
         <a href="#" class="cs_btn cs_style_1 cs_fs_18 cs_semibold" style="background-color: var(--primary)">
             View All <i class="fas fa-arrow-right"></i>
         </a>
@@ -1659,7 +1414,7 @@
         </div>
     </div>
 </div>
-
+</section>
 {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> --}}
 
 <script>
@@ -1693,16 +1448,414 @@
 {{-- pacakage card end  --}}
 
 
-<!-- Start Team Section -->
- <section>
+<!-- Start Destination Section -->
+<section class="cs_accent_bg_1">
+  <div class="cs_height_135 cs_height_lg_75"></div>
+  <div class="container">
+    <div class="cs_section_heading cs_style_1">
+      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">POPULAR DESTINATION</h3>
+      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">Most Popular Destination</h2>
+    </div>
+    <div class="cs_height_55 cs_height_lg_40"></div>
+    <div class="cs_card_4_list">
+      <div class="cs_card cs_style_4 cs_hover_active active">
+        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2022/01/01/16/29/antelope-6908215_1280.jpg"></a>
+        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
+        <div class="cs_card_in">
+          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">Copenhagen,<br> Denmark</a></h2>
+        </div>
+      </div>
+      <div class="cs_card cs_style_4 cs_hover_active">
+        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2022/01/01/16/29/antelope-6908215_1280.jpg"></a>
+        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
+        <div class="cs_card_in">
+          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">California,<br> USA</a></h2>
+        </div>
+      </div>
+      <div class="cs_card cs_style_4 cs_hover_active">
+        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2025/02/09/12/19/lake-9394214_1280.jpg"></a>
+        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
+        <div class="cs_card_in">
+          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">Rome,<br> Italy</a></h2>
+        </div>
+      </div>
+      <div class="cs_card cs_style_4 cs_hover_active">
+        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2021/10/14/12/32/autumn-6708984_1280.jpg"></a>
+        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
+        <div class="cs_card_in">
+          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">London,<br> United Lingdom</a></h2>
+        </div>
+      </div>
+      <div class="cs_card cs_style_4 cs_hover_active">
+        <a href="{{ route('tourdetails') }}" class="cs_card_thumb cs_bg_filed" data-src="https://cdn.pixabay.com/photo/2025/01/01/14/48/bird-9303900_1280.jpg"></a>
+        <a href="{{ route('tourdetails') }}" class="cs_card_icon cs_center position-absolute"><i class="fa-solid fa-chevron-right"></i></a>
+        <div class="cs_card_in">
+          <h2 class="cs_card_title cs_fs_35 cs_white_color mb-0"><a href="{{ route('tourdetails') }}">Paris,<br> French</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs_height_140 cs_height_lg_80"></div>
+</section>
+<!-- End Destination Section -->
+
+
+
+<!-- Start Package Section -->
+{{-- <section>
   <div class="cs_height_135 cs_height_lg_75"></div>
   <div class="container">
     <div class="cs_section_heading cs_style_1 text-center">
-      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">WHY TRAVEL WITH Flytrp</h3>
+      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">CHOOSE YOUR PACKAGE</h3>
+      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Popular Tours Packages</h2>
+    </div>
+    <div class="cs_height_55 cs_height_lg_40"></div>
+  </div>
+  <div class="container">
+    <div class="row cs_gap_y_30">
+      <div class="col-lg-4">
+        <div class="cs_card cs_style_3 cs_white_bg">
+          <a href="{{ route('tourdetails') }}" class="cs_card_thumb position-relative cs_zoom">
+            <img src="assets/images/package_img_5.jpeg" alt="Package Thumb" class="cs_zoom_in">
+            <div class="cs_package_badge cs_fs_18 cs_semibold cs_primary_color cs_primary_font position-absolute">3 Day 2 Night</div>
+          </a>
+          <div class="cs_card_content">
+            <h2 class="cs_card_title cs_fs_24 cs_semibold"><a href="{{ route('tourdetails') }}">Beauty of Solomon Island</a></h2>
+            <p class="cs_card_subtitle mb-0"><i class="fa-solid fa-globe cs_accent_color"></i> Africa Portugal Mexico</p>
+            <hr>
+            <div class="cs_card_action">
+              <span class="cs_card_price cs_fs_24 cs_semibold cs_primary_color cs_primary_font mb-0">$4500</span>
+              <a href="{{ route('tourdetails') }}" class="cs_btn cs_style_1 cs_fs_18 cs_semibold"> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="cs_card cs_style_3 cs_white_bg">
+          <a href="{{ route('tourdetails') }}" class="cs_card_thumb position-relative cs_zoom">
+            <img src="assets/images/package_img_6.jpeg" alt="Package Thumb" class="cs_zoom_in">
+            <div class="cs_package_badge cs_fs_18 cs_semibold cs_primary_color cs_primary_font position-absolute">3 Day 2 Night</div>
+          </a>
+          <div class="cs_card_content">
+            <h2 class="cs_card_title cs_fs_24 cs_semibold"><a href="{{ route('tourdetails') }}">Believe In Your Mexico</a></h2>
+            <p class="cs_card_subtitle mb-0"><i class="fa-solid fa-globe cs_accent_color"></i> New York City, USA</p>
+            <hr>
+            <div class="cs_card_action">
+              <span class="cs_card_price cs_fs_24 cs_semibold cs_primary_color cs_primary_font mb-0">$4500</span>
+              <a href="{{ route('tourdetails') }}" class="cs_btn cs_style_1 cs_fs_18 cs_semibold"> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="cs_card cs_style_3 cs_white_bg">
+          <a href="{{ route('tourdetails') }}" class="cs_card_thumb position-relative cs_zoom">
+            <img src="assets/images/package_img_7.jpeg" alt="Package Thumb" class="cs_zoom_in">
+            <div class="cs_package_badge cs_fs_18 cs_semibold cs_primary_color cs_primary_font position-absolute">3 Day 2 Night</div>
+          </a>
+          <div class="cs_card_content">
+            <h2 class="cs_card_title cs_fs_24 cs_semibold"><a href="{{ route('tourdetails') }}">Proof That Bahamas Beaty</a></h2>
+            <p class="cs_card_subtitle mb-0"><i class="fa-solid fa-globe cs_accent_color"></i> Machu Picchu, Peru</p>
+            <hr>
+            <div class="cs_card_action">
+              <span class="cs_card_price cs_fs_24 cs_semibold cs_primary_color cs_primary_font mb-0">$4500</span>
+              <a href="{{ route('tourdetails') }}" class="cs_btn cs_style_1 cs_fs_18 cs_semibold"> Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="cs_height_140 cs_height_lg_80"></div>
+</section> --}}
+<!-- End Package Section -->
+
+<section style="padding-top: 20px; padding-bottom: 10px;">
+ <div class="container" style="padding-bottom: 20px">
+   <div class="text-center">
+  <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">
+    YOU CAN'T AFFORD TO MISS THESE
+  </h3>
+  <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp"
+      data-wow-duration="0.8s" data-wow-delay="0.2s">
+    Major Attractions
+  </h2>
+</div>
+
+       <p class="hero-description">
+          You will never get enough of fun and adventure while in Russia and
+          other CIS countries. Have a look at these snippets and decide for
+          yourself for how long will you postpone your travel plans for these.
+        </p>
+      <div class="row g-4">
+        <!-- Row 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card bungee-jump">
+            <div class="card-content-2">
+              <h3 class="card-title">Bungee Jump</h3>
+              <p class="card-description">
+                Enjoy this breathtaking adventure in Sochi, Russia
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card skiing">
+            <div class="card-content-2">
+              <h3 class="card-title">Skiing</h3>
+              <p class="card-description">
+                Enjoy this sport in Sochi, Murmansk, Baikal and Almaty
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card circus">
+            <div class="card-content-2">
+              <h3 class="card-title">Circus</h3>
+              <p class="card-description">
+                Witness some of the best Acrobats in Moscow
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card ballet">
+            <div class="card-content-2">
+              <h3 class="card-title">Ballet</h3>
+              <p class="card-description">
+                You just can't afford to miss Swan Lake Ballet dance in St.
+                Petersburg and Minsk
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="attraction-card fishing">
+            <div class="card-content-2">
+              <h3 class="card-title">Fishing</h3>
+              <p class="card-description">
+                Spend hours on Fishing in Baikal Lake
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="attraction-card dog-sledding">
+            <div class="card-content-2">
+              <h3 class="card-title">Dog Sledding</h3>
+              <p class="card-description">
+                Murmansk is the place to enjoy this leisure activity
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="attraction-card rafting">
+            <div class="card-content-2">
+              <h3 class="card-title">Rafting</h3>
+              <p class="card-description">Enjoy Rafting in Kola Peninsula</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card helicopter">
+            <div class="card-content-2">
+              <h3 class="card-title">Helicopter Ride</h3>
+              <p class="card-description">Picturesque beauty in Kutsk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card husky-ride">
+            <div class="card-content-2">
+              <h3 class="card-title">Husky Ride</h3>
+              <p class="card-description">
+                Slow Husky Dogs on Snow in Murmansk
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card northern-lights">
+            <div class="card-content-2">
+              <h3 class="card-title">Northern Lights</h3>
+              <p class="card-description">
+                Enjoy this magic of nature in Murmansk
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="attraction-card tank-ride">
+            <div class="card-content-2">
+              <h3 class="card-title">Tank Ride</h3>
+              <p class="card-description">Feel the Jizah in Moscow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="view-all-btn">
+          VIEW ALL MAJOR ATTRACTIONS <i class="fas fa-arrow-right ms-2"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</section>
+
+
+
+{{-- pacakages end new --}}
+
+<!-- Start CTA Section -->
+<section class="cs_cta cs_style_1 cs_bg_filed cs_primary_bg cs_bg_fixed" data-src="assets/images/banner_bg_2.jpeg">
+  <div class="cs_height_150 cs_height_lg_80"></div>
+  <div class="container">
+    <div class="row cs_gap_y_40">
+      <div class="col-lg-6">
+        <div class="cs_cta_text">
+          <h3 class="cs_cta_title_mini cs_fs_24 cs_medium cs_white_color cs_ternary_font wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">27% DISCOUNT OFFER </h3>
+          <h2 class="cs_cta_title cs_fs_56 cs_bold cs_white_color">Discount Popup Examples to Elevate</h2>
+          <p class="cs_cta_subtitle cs_fs_18 cs_white_color">Denouncing pleasure and praising pain was born and will give you <br> complete great explorer of the truth the master-builder.</p>
+          <a href="" class="cs_btn cs_style_1 cs_fs_18 cs_semibold">
+            Read More
+            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.5866 5.69629H0.41235C0.184269 5.69629 0 5.46776 0 5.1849C0 4.90204 0.184269 4.67352 0.41235 4.67352H18.5906L16.0881 1.57004C15.927 1.37028 15.927 1.04587 16.0881 0.846109C16.2492 0.646349 16.5108 0.646349 16.6718 0.846109L19.8792 4.82374C19.9977 4.97076 20.0325 5.1897 19.9681 5.38147C19.9036 5.57164 19.7529 5.69629 19.5866 5.69629Z" fill="currentColor"/><path d="M16.3435 9.11986C16.2384 9.11986 16.1333 9.08012 16.0538 8.99935C15.8935 8.83909 15.8935 8.57884 16.0538 8.41858L19.2487 5.22371C19.4089 5.06345 19.6692 5.06345 19.8294 5.22371C19.9897 5.38396 19.9897 5.64422 19.8294 5.80448L16.6346 8.99935C16.5538 9.08012 16.4487 9.11986 16.3435 9.11986Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="cs_partners_wrap overflow-hidden">
+          <div class="cs_partners">
+            <div class="cs_partner">
+              <img src="assets/images/brand_6.png" alt="Brand Logo">
+            </div>
+            <div class="cs_partner">
+              <img src="assets/images/brand_7.png" alt="Brand Logo">
+            </div>
+            <div class="cs_partner">
+              <img src="assets/images/brand_8.png" alt="Brand Logo">
+            </div>
+            <div class="cs_partner">
+              <img src="assets/images/brand_9.png" alt="Brand Logo">
+            </div>
+            <div class="cs_partner">
+              <img src="assets/images/brand_10.png" alt="Brand Logo">
+            </div>
+            <div class="cs_partner">
+              <img src="assets/images/brand_11.png" alt="Brand Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs_height_150 cs_height_lg_80"></div>
+</section>
+<!-- End CTA Section -->
+
+<!-- Start Why Choose Us Section -->
+<section>
+  <div class="cs_height_135 cs_height_lg_75"></div>
+  <div class="container">
+    <div class="cs_section_heading cs_style_1 text-center">
+      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">Why Choose Us</h3>
+      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Get The Best Travel Experience</h2>
+    </div>
+    <div class="cs_height_55 cs_height_lg_40"></div>
+    <div class="cs_iconbox_4_wrap">
+      <div>
+        <div class="row cs_gap_y_45">
+          <div class="col-lg-12 col-6">
+            <div class="cs_iconbox cs_style_4">
+              <div class="cs_iconbox_icon cs_center">
+                <img src="assets/images/icons/calendar_icon_2.svg" alt="Calendar Icon">
+              </div>
+              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Set Travel Plan</h2>
+              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-6">
+            <div class="cs_iconbox cs_style_4">
+              <div class="cs_iconbox_icon cs_center">
+                <img src="assets/images/icons/hotel-icon.svg" alt="Hotel Icon">
+              </div>
+              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Luxary Hotel</h2>
+              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cs_iconbox_4_thumb cs_center">
+          <img src="assets/images/about_4.png" alt="About Thumb">
+        </div>
+      </div>
+      <div>
+        <div class="row cs_gap_y_45">
+          <div class="col-lg-12 col-6">
+            <div class="cs_iconbox cs_style_4">
+              <div class="cs_iconbox_icon cs_center">
+                <img src="assets/images/icons/compass_icon.svg" alt="Calendar Icon">
+              </div>
+              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Explore Around</h2>
+              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-6">
+            <div class="cs_iconbox cs_style_4">
+              <div class="cs_iconbox_icon cs_center">
+                <img src="assets/images/icons/headset_icon.svg" alt="Hotel Icon">
+              </div>
+              <h2 class="cs_iconbox_title cs_fs_24 cs_semibold">Support 24/7</h2>
+              <p class="cs_iconbox_subtitle mb-0">Distinctively impact client-centered ideas via future-proof paradigms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs_height_135 cs_height_lg_75"></div>
+</section>
+<!-- End Why Choose Us Section -->
+
+
+
+
+{{-- updated old code end here --}}
+
+{{-- updated new code end  --}}
+
+
+
+
+
+<!-- Start Team Section -->
+ <section style="padding-top: 10px">
+  {{-- <div class="cs_height_135 cs_height_lg_75"></div> --}}
+  <div class="container">
+    <div class="cs_section_heading cs_style_1 text-center">
+      <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">WHY TRAVEL WITH FLYTRP</h3>
       {{-- <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Our Experts Team Member</h2> --}}
     </div>
     <div class="cs_height_55 cs_height_lg_40"></div>
-    <div class="row cs_gap_y_30">
+    <div class="row cs_gap_y_10">
       <div class="col-lg-4">
         <div class="cs_team cs_style_1 position-relative">
           <div class="cs_team_thumb cs_zoom overflow-hidden">
@@ -2016,156 +2169,7 @@
       </div> --}}
     {{-- </div> --}}
 
-    <div class="container" style="padding-bottom: 20px">
-   <div class="text-center">
-  <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">
-    You Can't Afford To Miss These
-  </h3>
-  <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp"
-      data-wow-duration="0.8s" data-wow-delay="0.2s">
-    Major Attractions
-  </h2>
-</div>
 
-       <p class="hero-description">
-          You will never get enough of fun and adventure while in Russia and
-          other CIS countries. Have a look at these snippets and decide for
-          yourself for how long will you postpone your travel plans for these.
-        </p>
-      <div class="row g-4">
-        <!-- Row 1 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card bungee-jump">
-            <div class="card-content-2">
-              <h3 class="card-title">Bungee Jump</h3>
-              <p class="card-description">
-                Enjoy this breathtaking adventure in Sochi, Russia
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card skiing">
-            <div class="card-content-2">
-              <h3 class="card-title">Skiing</h3>
-              <p class="card-description">
-                Enjoy this sport in Sochi, Murmansk, Baikal and Almaty
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card circus">
-            <div class="card-content-2">
-              <h3 class="card-title">Circus</h3>
-              <p class="card-description">
-                Witness some of the best Acrobats in Moscow
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card ballet">
-            <div class="card-content-2">
-              <h3 class="card-title">Ballet</h3>
-              <p class="card-description">
-                You just can't afford to miss Swan Lake Ballet dance in St.
-                Petersburg and Minsk
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="attraction-card fishing">
-            <div class="card-content-2">
-              <h3 class="card-title">Fishing</h3>
-              <p class="card-description">
-                Spend hours on Fishing in Baikal Lake
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="attraction-card dog-sledding">
-            <div class="card-content-2">
-              <h3 class="card-title">Dog Sledding</h3>
-              <p class="card-description">
-                Murmansk is the place to enjoy this leisure activity
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="attraction-card rafting">
-            <div class="card-content-2">
-              <h3 class="card-title">Rafting</h3>
-              <p class="card-description">Enjoy Rafting in Kola Peninsula</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card helicopter">
-            <div class="card-content-2">
-              <h3 class="card-title">Helicopter Ride</h3>
-              <p class="card-description">Picturesque beauty in Kutsk</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card husky-ride">
-            <div class="card-content-2">
-              <h3 class="card-title">Husky Ride</h3>
-              <p class="card-description">
-                Slow Husky Dogs on Snow in Murmansk
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card northern-lights">
-            <div class="card-content-2">
-              <h3 class="card-title">Northern Lights</h3>
-              <p class="card-description">
-                Enjoy this magic of nature in Murmansk
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="attraction-card tank-ride">
-            <div class="card-content-2">
-              <h3 class="card-title">Tank Ride</h3>
-              <p class="card-description">Feel the Jizah in Moscow</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center">
-        <button class="view-all-btn">
-          VIEW ALL MAJOR ATTRACTIONS <i class="fas fa-arrow-right ms-2"></i>
-        </button>
-      </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-{{-- pacakages end new --}}
 
 
 

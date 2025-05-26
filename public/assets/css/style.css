@@ -5712,7 +5712,7 @@ hr {
 ----------------------------------------------------------------*/
 .cs_team.cs_style_1 {
   margin-bottom: 13px;
-  max-width: 260px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -5732,8 +5732,8 @@ hr {
 .cs_team.cs_style_1 .cs_team_thumb {
   border-radius: 5px;
     position: relative;
-    max-width: 260px;
-    max-height: 260px;
+    max-width: 360px;
+    max-height: 360px;
     z-index: 1;
 }
 .cs_team.cs_style_1 .cs_team_thumb::after {
