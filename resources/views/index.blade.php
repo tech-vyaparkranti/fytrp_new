@@ -1724,7 +1724,7 @@
 {{-- pacakages end new --}}
 
 <!-- Start CTA Section -->
-<section class="cs_cta cs_style_1 cs_bg_filed cs_primary_bg cs_bg_fixed" data-src="assets/images/banner_bg_2.jpeg">
+<section class="cs_cta cs_style_1 cs_bg_filed cs_primary_bg cs_bg_fixed" data-src="assets/images/banner/bannerflytrp5.png">
   <div class="cs_height_150 cs_height_lg_80"></div>
   <div class="container">
     <div class="row cs_gap_y_40">
@@ -2176,7 +2176,7 @@
 
 
 <!-- Start Accordian Section -->
-<section class="cs_primary_bg cs_bg_filed cs_bg_fixed cs_parallax" data-src="assets/images/accordian_bg.jpeg">
+<section class="cs_primary_bg cs_bg_filed cs_bg_fixed cs_parallax" data-src="assets/images/banner/bannerflytrp2.png">
   <div class="cs_height_150 cs_height_lg_80"></div>
   <div class="container">
     <div class="row cs_gap_y_40 align-items-center">
