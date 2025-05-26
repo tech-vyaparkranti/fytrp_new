@@ -2770,6 +2770,7 @@ hr {
 
 .cs_site_header.cs_style_1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: var(--primary);
 }
 .cs_site_header.cs_style_1 .cs_main_header_in,
 .cs_site_header.cs_style_1 .cs_top_header_in {
@@ -3038,6 +3039,7 @@ hr {
 @media screen and (min-width: 1200px) {
   .cs_main_header {
     position: relative;
+    background: var(--primary);
   }
   .cs_main_header .container-fluid {
     padding-right: 120px;

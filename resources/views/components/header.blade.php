@@ -19,7 +19,7 @@
                 {{-- <img   src="{{ asset($logoPath) }}" alt="Logo"> --}}
                 <img class="logo-header-main" src="{{ asset($logoPath) }}" alt="Logo"
                 {{-- style="height: 90px; width: auto;" --}}
-                onerror="this.onerror=null; this.src='{{ asset('assets/images/default-logo.png') }}';">
+                onerror="this.onerror=null; this.src='{{ asset('assets/images/flytrp_logo_main.jpg') }}';">
 
             </a>
         </div>
@@ -55,7 +55,7 @@
                 <li><a href="{{ route('destinations') }}">Services</a></li>
                 <!-- <li>
                   <a href="{{ route('blog') }}">Blogs</a>
-                  
+
                 </li> -->
                 <li><a href="{{ route('galleryPages') }}">Gallery</a></li>
                 <li><a href="{{ route(name: 'contact') }}">Contact Us</a></li>
@@ -146,7 +146,7 @@
         align-items: center;
         padding: 0 0px;
         border-right: 1px solid rgba(255, 255, 255, 0.25);
-        background: var(--accent);
+        background: white;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -158,7 +158,7 @@
         align-items: center;
         padding: 0 0px;
         border-right: 1px solid rgba(255, 255, 255, 0.25);
-        background: var(--accent);
+        background: white;
     }
 }
     </style>

@@ -876,6 +876,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
   <div class="cs_height_140 cs_height_lg_80"></div>
@@ -1182,7 +1183,7 @@
         position: absolute;
         top: 15px;
         right: 15px;
-        background: linear-gradient(135deg, #e74c3c, #c0392b);
+       background-color: var(--primary);
         color: white;
         padding: 8px 16px;
         font-size: 10px;
@@ -1190,7 +1191,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         border-radius: 25px;
-        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+        box-shadow: 0 4px 15px rgba(60, 174, 231, 0.4);
         z-index: 2;
         animation: pulse 2s infinite;
     }
@@ -1294,7 +1295,7 @@
         width: 30px;
         height: 30px;
         background: rgba(255,255,255,0.95);
-        border: 3px solid #e74c3c;
+        border: 3px solid var(--primary);
         border-radius: 50%;
         top: 50%;
         transform: translateY(-50%);
@@ -1305,8 +1306,8 @@
     }
 
     .carousel-control-prev:hover, .carousel-control-next:hover {
-        background: #e74c3c;
-        box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        background: var(--primary);
+        box-shadow: 0 8px 25px rgba(60, 171, 231, 0.4);
         transform: translateY(-50%) scale(1.1);
     }
 
@@ -1325,7 +1326,7 @@
 
     .carousel-control-prev-icon, .carousel-control-next-icon {
         background-image: none;
-        color: #e74c3c;
+        color: var(--primary);
         font-size: 20px;
         display: flex;
         align-items: center;
@@ -1365,8 +1366,8 @@
         }
 
         .carousel-control-prev, .carousel-control-next {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
         }
 
         .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -1391,7 +1392,7 @@
         }
 
         .carousel-container {
-            padding: 0 40px;
+            padding: 0 5px;
         }
 
         .section-title {
@@ -1402,8 +1403,9 @@
 
 <div class="tours-container">
     <div class="section-header">
-        <h2 class="section-title">Browse Our Group Tours</h2>
-        <a href="#" class="view-all">
+        {{-- <h2 class="section-title">Browse Our Group Tours</h2> --}}
+        <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">Browse Our Group Tours</h3>
+        <a href="#" class="cs_btn cs_style_1 cs_fs_18 cs_semibold" style="background-color: var(--primary)">
             View All <i class="fas fa-arrow-right"></i>
         </a>
     </div>
@@ -1413,7 +1415,7 @@
             <div class="carousel-inner">
                 <!-- Slide 1 (4 cards) -->
                 <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex ">
                         <!-- Card 1 -->
                         <div class="tour-card-2">
                             <div class="card-image">
@@ -1530,7 +1532,7 @@
 
                 <!-- Slide 2 (4 cards) -->
                 <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex ">
                         <!-- Card 5 -->
                         <div class="tour-card-2">
                             <div class="card-image">
@@ -1658,7 +1660,7 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> --}}
 
 <script>
     // Initialize the carousel with autoplay

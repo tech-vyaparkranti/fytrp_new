@@ -233,7 +233,10 @@
     </footer>
     <input id="enquiry" hidden="" type="checkbox">
 <section class="enquiry-form">
-    <label for="enquiry" class="enquiry-button" onclick="openEnquiryForm()"><a href="{{ route('contact') }}">Enquire now</a></label>
+    {{-- <label for="enquiry" class="enquiry-button" onclick="openEnquiryForm()"><a href="{{ route('contact') }}">Enquire now</a></label> --}}
+    <label for="enquiry" class="enquiry-button" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+    <a href="javascript:void(0);">Enquire now</a>
+</label>
 
     <div class="enquiry-container">
         <div class="contact-box_right_box">
@@ -245,7 +248,55 @@
             </div>
         </div>
     </div>
+    <!-- Trigger Button -->
+
+
 </section>
+
+<!-- Enquiry Modal -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enquiryModalLabel">
+          <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" width="24" />
+          Send us a Query
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Ready to venture out into the world? Fill the form below and start your brand new journey with us</p>
+
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Name*" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Email*" required>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control" placeholder="Mobile*" required>
+            </div>
+            <div class="col-md-6">
+              <input type="date" class="form-control" placeholder="Date*" required>
+            </div>
+            <div class="col-md-6">
+              <input type="number" class="form-control" placeholder="No of travellers*" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Destination*" value="Almaty, Kazakhstan" required>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <style>
     section.enquiry-form {
