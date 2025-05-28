@@ -48,9 +48,9 @@
                 <div class="cs_iconbox_subtitle mb-0"
                     style="font-size: 18px; padding: 11px; display: block;"
                     data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                <a href="mailto:{!! $Email ?? 'book365days@gmail.com' !!}"
+                <a href="mailto:{!! $Email ?? 'dumy@gmail.com' !!}"
                     style="">
-                    {!! $Email ?? 'book365days@gmail.com' !!}
+                    {!! $Email ?? 'dumy@gmail.com' !!}
                 </a>
                 </div>
 

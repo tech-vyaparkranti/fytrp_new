@@ -109,7 +109,7 @@
                           <span class="icon icon-envelope" style="color:white #fff; text-decoration: none;"  onmouseover="this.style.color='white #fff'", onmouseover="this.style.color='white'" onmouseout="this.style.color='white'">Call Us:</span>
                           <span class="text" style="display: inline-flex; align-items: center;">
                               <span class="country-code" style="margin-left: 5px"> +91-</span>
-                              <span class="mobile-number">{!! $phoneElement ? $phoneElement->element_details : '9711433495' !!}</span>
+                              <span class="mobile-number">{!! $phoneElement ? $phoneElement->element_details : '9876543210' !!}</span>
                           </span>
                       </a>
                   </li>
@@ -119,8 +119,8 @@
                   {{-- <li>Mail Us:<a href="mailto:{!! $emailElement ? $emailElement->element_details : 'book365days@gmail.com' !!}">  {!! $emailElement ? $emailElement->element_details: 'book365days@gmail.com' !!} </a></li> --}}
                   <div style="display: flex; align-items: center; gap: 5px;">
                   <p> Mail Us:
-                    <a href="mailto:book365days@gmail.com" style="color:white #fff; text-decoration: none;"  onmouseover="this.style.color='rgb(79, 184, 166)'", onmouseover="this.style.color='white'" onmouseout="this.style.color='white'">
-                        {!! $email ? $email->element_details : 'book365days@gmail.com' !!}
+                    <a href="mailto:dumy@gmail.com" style="color:white #fff; text-decoration: none;"  onmouseover="this.style.color='rgb(79, 184, 166)'", onmouseover="this.style.color='white'" onmouseout="this.style.color='white'">
+                        {!! $email ? $email->element_details : 'dumy@gmail.com' !!}
                     </a>
                 </p>
             </div>
@@ -223,7 +223,7 @@
       <div class="container">
         <div class="cs_footer_botto text-center pb-4">
           <!-- <div class="cs_copyright">Copyright © 2024 book365days All rights reserved by vyapa</div> -->
-          © 2025 All Rights Reserved by Book365days. Developed by <a href="https://vyaparkranti.com/" target="_blank">Vyapar kranti</a>
+          © 2025 All Rights Reserved by Flying Trip Online. Developed by <a href="https://vyaparkranti.com/" target="_blank">Vyapar kranti</a>
 
           <ul class="cs_menu_widget_2 cs_mp0">
             <li><a href="#"></a></li>

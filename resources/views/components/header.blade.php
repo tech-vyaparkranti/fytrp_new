@@ -72,7 +72,7 @@
                         <span class="text" style="display: inline-flex;  ">
                           <i class="fas fa-phone" style="margin-right: 8px; font-size: 18px; vertical-align: middle; margin-top: 5px;"></i>
                             <span class="country-code" >+91 -</span>
-                            <span class="mobile-number">{!! $phoneElement ? $phoneElement->element_details : '9711433495' !!}</span>
+                            <span class="mobile-number">{!! $phoneElement ? $phoneElement->element_details : '9876543210' !!}</span>
 
                         </span>
                         <span class="talk-to-expert" style="font-size: 17px; color: white; margin-top: 20px; font-family: 'Playfair Display', serif;">Talk to Expert</span>
