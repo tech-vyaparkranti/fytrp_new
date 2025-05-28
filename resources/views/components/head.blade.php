@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Book365days">
     <!-- Favicon Icon -->
-    <link rel="icon" href="{{ asset($Logo ?? 'assets/images/book365days.png') }}">
+    <link rel="icon" href="{{ asset($Logo ?? 'assets/images/favicon-flytriping.png') }}">
     <!-- Site Title -->
     <title>@yield('title')</title>
     <meta name="title" content="@yield('title', 'Best Affordable Travel Agency for Budget Travelers')">
