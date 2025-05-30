@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/light_gallerr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="{{ asset("assets/css/jquery.fancybox.min.css") }}" rel="stylesheet">
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>

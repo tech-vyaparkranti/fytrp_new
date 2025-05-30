@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\USPController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AttractionController;
 use App\Http\Controllers\AwardsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\OurTeamController;
@@ -23,6 +24,8 @@ use App\Http\Controllers\HomeDestinationsController;
 use App\Http\Controllers\HomeRecognitionsController;
 use App\Http\Controllers\BookHotelController;
 use App\Http\Controllers\OurServicesModelController;
+use App\Http\Controllers\TourTypeController;
+
 
 Route::get("login",[AdminController::class,"Login"])->name("login");
 Route::post("AdminUserLogin",[AdminController::class,"AdminLoginUser"])->name("AdminLogin");
@@ -69,6 +72,10 @@ Route::middleware(['auth'])->group(function () {
     // Route::get("services-admin", [ServicesController::class, "servicesSlider"])->name("servicesSlider");
     // Route::post("services", [ServicesController::class, "servicesSaveSlide"])->name("servicesSaveSlide");
     // Route::post("services-data", [ServicesController::class, "servicesData"])->name("servicesData");
+
+     Route::resource('manage-attraction', AttractionController::class);
+     Route::post('/save-attraction', [AttractionController::class, 'storeOrUpdate'])->name('saveAttraction');
+    Route::post('/attraction-data', [AttractionController::class, 'datatable'])->name('attractionData');
     
     Route::get("mange-contact-us",[ContactUsController::class,"manageContactUs"])->name("manageContactUs");
     Route::post("contact-us-data",[ContactUsController::class,"ContactUsData"])->name("ContactUsData");
@@ -123,6 +130,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post("save-hotel", [BookHotelController::class, "store"])->name("storeHotel");
     Route::post("get-hotel-data", [BookHotelController::class, "hotelData"])->name("hotelData");
     Route::post("hotel-action", [BookHotelController::class, "action"])->name("hotelAction");
+
+Route::get("tour-admin", [TourTypeController::class, "tourSlider"])->name("tourSlider");
+    Route::post("tour-service", [TourTypeController::class, "saveTour"])->name("saveTour");
+    Route::post("tour-data", [TourTypeController::class, "tourData"])->name("tourData");
 
 
 });

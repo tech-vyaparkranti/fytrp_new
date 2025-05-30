@@ -15,27 +15,70 @@ use App\Models\DestinationModel;
 use App\Models\TestimonialModel;
 use App\Models\HomeRecognitionsModel;
 use App\Models\BookHotel;
+use App\Models\Attraction;
 
 class HomeController extends Controller
 {
     use CommonFunctions;
     public function index()
-    {
-        $getPackages = (new PackageMasterController())->getActivePackages();
-        $packageCategory = (new PackageCategoryController())->getActivePackagesCategoryData();
-        $data = $this->getElement();
-        $packages = PackageMaster::where(PackageMaster::STATUS, "1")->get();
-        $destinations = PackageMaster::distinct()->pluck('package_country')->toArray();
-        // $travelCategories = PackageMaster::distinct()->pluck('package_type')->toArray();
-        $blogs = Blog::where(Blog::BLOG_STATUS, Blog::BLOG_STATUS_LIVE)
+{
+    $getPackages = (new PackageMasterController())->getActivePackages();
+    $packageCategory = (new PackageCategoryController())->getActivePackagesCategoryData();
+    $data = $this->getElement();
+
+    $packages = PackageMaster::where(PackageMaster::STATUS, "1")->get();
+
+    // Decode images and prepare storage-friendly URLs
+    foreach ($packages as $package) {
+        $imagesRaw = $package->package_image;
+
+        // Handle package_image: decode if JSON string, use directly if array
+        if (is_string($imagesRaw)) {
+            $decoded = json_decode($imagesRaw, true);
+        } elseif (is_array($imagesRaw)) {
+            $decoded = $imagesRaw;
+        } else {
+            $decoded = [];
+        }
+
+        // Ensure it's an array
+        $decoded = is_array($decoded) ? $decoded : [];
+
+        // Convert each path to a valid public URL
+        $package->decoded_images = array_map(function ($imgPath) {
+            return asset(str_replace('website/uploads', 'storage', $imgPath));
+        }, $decoded);
+    }
+
+    $destinations = PackageMaster::distinct()->pluck('package_country')->toArray();
+
+    $blogs = Blog::where(Blog::BLOG_STATUS, Blog::BLOG_STATUS_LIVE)
         ->orderBy(Blog::BLOG_SORTING, 'desc')
         ->get();
-        $usp=USPModel::where(USPModel::SLIDE_STATUS,USPModel::SLIDE_STATUS_LIVE)->get();
-        $testimonial=TestimonialModel::where(TestimonialModel::SLIDE_STATUS,TestimonialModel::SLIDE_STATUS_LIVE)->get();
-        $partners=HomeRecognitionsModel::where(HomeRecognitionsModel::SLIDE_STATUS,HomeRecognitionsModel::SLIDE_STATUS_LIVE)->get();
-        $homedestinations = DestinationModel::where('status','1')->get();
-        return view('index',$data,compact('getPackages','packageCategory','packages','destinations','blogs','usp','testimonial','partners','homedestinations'));
-    }
+
+    $usp = USPModel::where(USPModel::SLIDE_STATUS, USPModel::SLIDE_STATUS_LIVE)->get();
+    $testimonial = TestimonialModel::where(TestimonialModel::SLIDE_STATUS, TestimonialModel::SLIDE_STATUS_LIVE)->get();
+    $partners = HomeRecognitionsModel::where(HomeRecognitionsModel::SLIDE_STATUS, HomeRecognitionsModel::SLIDE_STATUS_LIVE)->get();
+    $homedestinations = DestinationModel::where('status', '1')->get();
+    $majorattraction = Attraction::where('status', '1')->get();
+    $discountBanner = WebsiteElements::where('element', 'discount_banner')->first();
+
+
+    return view('index', $data, compact(
+        'getPackages',
+        'packageCategory',
+        'packages',
+        'destinations',
+        'blogs',
+        'usp',
+        'testimonial',
+        'partners',
+        'homedestinations',
+        'majorattraction',
+        'discountBanner',
+    ));
+}
+
     
     public function index2()
     {
@@ -101,17 +144,27 @@ class HomeController extends Controller
     }
 
     public function tourDetailpage($slug)
-    {
-        $galleryItems = $this->getCachedGalleryItems();
-        $elementData = $this->getElement();
-        $data["galleryImages"] = $galleryItems;
-        $package = PackageMaster::where('slug', $slug)->firstOrFail();
-        $otherpackages = PackageMaster::where('slug', '!=', $slug)
+{
+    $galleryItems = $this->getCachedGalleryItems();
+    $elementData = $this->getElement();
+
+    $package = PackageMaster::where('slug', $slug)->firstOrFail();
+
+    $otherpackages = PackageMaster::where('slug', '!=', $slug)
         ->where(PackageMaster::STATUS, "1")
         ->take(4)
         ->get();
-        return view('tourDetailpage',$data,compact('package','otherpackages'));
-    }
+
+    $data = [
+        'galleryImages' => $galleryItems,
+        'elementData' => $elementData,
+        'package' => $package,
+        'otherpackages' => $otherpackages,
+    ];
+
+    return view('tourDetailpage', $data);
+}
+
 
     public function blog()
     {

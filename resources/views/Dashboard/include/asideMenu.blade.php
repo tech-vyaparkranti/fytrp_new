@@ -129,6 +129,14 @@
                   <div data-i18n="Analytics">Manage Package Master</div>
                 </a>
               </li>
+
+              <li class="menu-item">
+                <a href="{{route("manage-attraction.index")}}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-notepad"></i>
+                  <div data-i18n="Analytics">Manage attractions</div>
+                </a>
+              </li>
+
               <li class="menu-item">
                 <a href="{{route("viewDestinationMaster")}}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-book-content"></i>
