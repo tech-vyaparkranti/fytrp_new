@@ -155,7 +155,7 @@ savings!</p>
     <!-- End Why Choose Us Section -->
 
     <!-- Start Team Section -->
-     <section class="cs_accent_bg_1">
+     {{-- <section class="cs_accent_bg_1">
       <div class="cs_height_135 cs_height_lg_75"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_1 text-center">
@@ -220,7 +220,202 @@ savings!</p>
         </div>
       </div>
       <div class="cs_height_140 cs_height_lg_80"></div>
-     </section>
+     </section> --}}
+
+      <style>
+      /* Original styles */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .feature-card-12 {
+        transition: all 0.3s ease;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+      }
+
+      .feature-card-12:hover {
+        transform: scale(1.05) translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon-12 {
+        font-size: 4rem;
+        display: block;
+        margin-bottom: 1rem;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .card-hover-12 {
+        background: linear-gradient(145deg, #fdfcfc, #c5c0c0);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-hover-12::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, #3494e6, #ec6ead);
+        transition: all 0.3s ease;
+      }
+
+      .card-hover-12:hover::before {
+        height: 100%;
+      }
+
+      .card-body-12 {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .swiper-slide {
+        display: flex;
+        /* height: auto; */
+      }
+
+      .swiper {
+        padding: 30px 0;
+        height: 400px;
+      }
+      .card-hover-12 {
+  height: 300px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.swiper-slide {
+  height: 320px; /* your preferred fixed height */
+}
+
+
+    </style>
+
+    <section style="padding-top: 10px">
+      <div class="container">
+        <div class="cs_section_heading cs_style_1 text-center">
+          <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">
+            WHY TRAVEL WITH FLYTRP
+          </h3>
+          <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0">
+            Our USP
+          </h2>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🌟</span>
+                  <h3 class="card-title-12 mb-3">Holistic Learning</h3>
+                  <p class="card-text-12 text-muted">
+                    Daily yoga, digital classes, and creative learning methods.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🏫</span>
+                  <h3 class="card-title-12 mb-3">World-Class Infrastructure</h3>
+                  <p class="card-text-12 text-muted">
+                    Spacious classrooms and advanced laboratories.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🛡️</span>
+                  <h3 class="card-title-12 mb-3">Safety First</h3>
+                  <p class="card-text-12 text-muted">
+                    24/7 CCTV, GPS transport & clean drinking water.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🛡️</span>
+                  <h3 class="card-title-12 mb-3">Safety First</h3>
+                  <p class="card-text-12 text-muted">
+                    24/7 CCTV, GPS transport & clean drinking water.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-30 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🛡️</span>
+                  <h3 class="card-title-12 mb-3">Safety First</h3>
+                  <p class="card-text-12 text-muted">
+                    24/7 CCTV, GPS transport & clean drinking water.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Repeat as needed -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Init -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
     <!-- End Team Section -->
 
     <!-- Start Video Section -->
