@@ -1495,7 +1495,7 @@
                 </div>
 
                 <div class="col-lg-7">
-                  
+
                     <div class="tour-grid-container">
                         <div class="tour-grid" id="tourGrid">
    @foreach ($packages as $package)
@@ -1676,18 +1676,18 @@
     </div>
     <div class="cs_height_55 cs_height_lg_40"></div>
     <div class="cs_card_4_list">
-      
+
       @if (!empty($homedestinations) && count($homedestinations) > 0)
         @foreach ($homedestinations as $item)
           <div class="cs_card cs_style_4 cs_hover_active {{ $loop->first ? 'active' : '' }}">
             {{-- Background image --}}
-            <a href="{{ route('destinationDetailpage', ['destination_slug' => $item->destination_slug]) }}" 
-               class="cs_card_thumb cs_bg_filed" 
+            <a href="{{ route('destinationDetailpage', ['destination_slug' => $item->destination_slug]) }}"
+               class="cs_card_thumb cs_bg_filed"
                style="background-image: url('{{ asset($item->destination_image) }}');">
             </a>
 
             {{-- Icon overlay --}}
-            <a href="{{ route('destinationDetailpage', ['destination_slug' => $item->destination_slug]) }}" 
+            <a href="{{ route('destinationDetailpage', ['destination_slug' => $item->destination_slug]) }}"
                class="cs_card_icon cs_center position-absolute">
               <i class="fa-solid fa-chevron-right"></i>
             </a>
@@ -1998,12 +1998,12 @@
 
 
 <!-- Start Team Section -->
- <section style="padding-top: 10px">
-  {{-- <div class="cs_height_135 cs_height_lg_75"></div> --}}
+ {{-- <section style="padding-top: 10px">
+  <div class="cs_height_135 cs_height_lg_75"></div>
   <div class="container">
     <div class="cs_section_heading cs_style_1 text-center">
       <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">WHY TRAVEL WITH FLYTRP</h3>
-      {{-- <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Our Experts Team Member</h2> --}}
+      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Our Experts Team Member</h2>
     </div>
     <div class="cs_height_55 cs_height_lg_40"></div>
     <div class="row cs_gap_y_10">
@@ -2046,7 +2046,219 @@
     </div>
   </div>
   <div class="cs_height_140 cs_height_lg_80"></div>
-</section>
+</section> --}}
+
+{{--
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feature Cards Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    /> --}}
+
+    <style>
+      /* Original styles */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .feature-card-12 {
+        transition: all 0.3s ease;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+      }
+
+      .feature-card-12:hover {
+        transform: scale(1.05) translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon-12 {
+        font-size: 4rem;
+        display: block;
+        margin-bottom: 1rem;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .card-hover-12 {
+        background: linear-gradient(145deg, #fdfcfc, #c5c0c0);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-hover-12::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, #3494e6, #ec6ead);
+        transition: all 0.3s ease;
+      }
+
+      .card-hover-12:hover::before {
+        height: 100%;
+      }
+
+      .card-body-12 {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .swiper-slide {
+        display: flex;
+        /* height: auto; */
+      }
+
+      .swiper {
+        padding: 30px 0;
+        height: 400px;
+      }
+      .card-hover-12 {
+  height: 300px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.swiper-slide {
+  height: 320px; /* your preferred fixed height */
+}
+
+
+    </style>
+
+    <section style="padding-top: 10px">
+      <div class="container">
+        <div class="cs_section_heading cs_style_1 text-center">
+          <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">
+            WHY TRAVEL WITH FLYTRP
+          </h3>
+          <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0">
+            Our USP
+          </h2>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🌟</span>
+                  <h3 class="card-title-12 mb-3">Holistic Learning</h3>
+                  <p class="card-text-12 text-muted">
+                    Daily yoga, digital classes, and creative learning methods.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🏫</span>
+                  <h3 class="card-title-12 mb-3">World-Class Infrastructure</h3>
+                  <p class="card-text-12 text-muted">
+                    Spacious classrooms and advanced laboratories.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🛡️</span>
+                  <h3 class="card-title-12 mb-3">Safety First</h3>
+                  <p class="card-text-12 text-muted">
+                    24/7 CCTV, GPS transport & clean drinking water.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-15 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🛡️</span>
+                  <h3 class="card-title-12 mb-3">Safety First</h3>
+                  <p class="card-text-12 text-muted">
+                    24/7 CCTV, GPS transport & clean drinking water.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card card-hover-12 feature-card-12 h-30 w-100">
+                <div class="card-body-12">
+                  <span class="feature-icon-12">🛡️</span>
+                  <h3 class="card-title-12 mb-3">Safety First</h3>
+                  <p class="card-text-12 text-muted">
+                    24/7 CCTV, GPS transport & clean drinking water.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Repeat as needed -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Init -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+
+
+
 <!-- End Team Section -->
 
 
@@ -2180,10 +2392,10 @@
       </div>
       <div class="cs_height_20 cs_height_lg_20"></div>
       <p class="cs_section_text mb-0">Completely reinvent worldwide testing procedures with cooperative initiatives to leverage existing excellent best practices with functional</p>
-      <div class="cs_height_40 cs_height_lg_30"></div>
+      {{-- <div class="cs_height_40 cs_height_lg_30"></div> --}}
       <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0" data-slides-per-view="responsive" data-xxs-slides="1" data-xs-slides="1" data-sm-slides="1" data-md-slides="1"
-        data-lg-slides="1" data-add-slides="1">
-        <div class="cs_slider_wrapper">
+        data-lg-slides="1" data-add-slides="1" style="height: fit-content">
+        <div class="cs_slider_wrapper" >
           <div class="slick_slide_in">
             <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
               <div class="cs_feedback_avatar">
@@ -2249,7 +2461,7 @@
       </div> --}}
        {{-- <div class="cs_height_140 cs_height_lg_60"></div> --}}
       <div class="container">
-        <div class="cs_video_block cs_style_1 cs_bg_filed position-relative" data-src="assets/images/video_block.jpeg">
+        <div class="cs_video_block cs_style_12 cs_bg_filed position-relative" data-src="assets/images/video_block.jpeg">
           <a href="https://www.youtube.com/embed/eSUmkFPln_U" class="cs_player_btn cs_center cs_accent_bg cs_video_open">
             <svg width="40" height="47" viewBox="0 0 40 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9921 17.8114L9.63992 0.951019C7.66105 -0.267256 5.26855 -0.317908 3.23984 0.815524C1.21113 1.94878 0 4.01294 0 6.3367V39.9039C0 43.4175 2.83109 46.2914 6.31071 46.3104C6.32021 46.3104 6.32971 46.3105 6.33902 46.3105C7.42642 46.3104 8.55958 45.9696 9.61794 45.3238C10.4693 44.8043 10.7384 43.693 10.219 42.8417C9.69952 41.9902 8.58807 41.7212 7.73693 42.2407C7.2419 42.5426 6.75844 42.6988 6.33016 42.6987C5.01727 42.6916 3.61159 41.5669 3.61159 39.904V6.33679C3.61159 5.33994 4.13113 4.4547 5.00127 3.96853C5.87149 3.48236 6.89764 3.50407 7.74543 4.02606L35.0977 20.8864C35.9198 21.3926 36.3902 22.2366 36.3882 23.2021C36.3862 24.1674 35.9124 25.0095 35.0857 25.514L15.31 37.6224C14.4594 38.1432 14.192 39.2549 14.7128 40.1054C15.2335 40.956 16.3453 41.2234 17.1959 40.7026L36.9693 28.5956C38.8625 27.4407 39.9955 25.4272 40 23.2093C40.0045 20.9916 38.8797 18.9735 36.9921 17.8114Z" fill="currentColor" />
             </svg>
@@ -2271,24 +2483,18 @@
 
 
 
-    <section class="cs_accent_bg_1">
+    {{-- <section class="cs_accent_bg_1">
     <div class="cs_height_135 cs_height_lg_75"></div>
      <div class="container">
     <div class="cs_section_heading cs_style_1 text-center">
       <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">TESTIMONIALS</h3>
       <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">What Our Clients Say</h2>
     </div>
-      <div class="cs_height_55 cs_height_lg_40"></div>
+
 
     <div class="container-fluid">
       <section class="testimonials-section">
-        {{-- <div class="section-title">
-          <h2><i class="fas fa-video me-3"></i>What Our Clients Say</h2>
-          <p>
-            Don't just take our word for it - hear directly from our satisfied
-            customers about their experience with our services.
-          </p>
-        </div> --}}
+
 
         <div class="carousel-container-testimonial">
           <div class="carousel-track" id="carouselTrack">
@@ -2555,7 +2761,7 @@
       </section>
     </div>
      </div>
-    </section>
+    </section> --}}
 
 
 
