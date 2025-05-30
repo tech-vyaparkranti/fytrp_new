@@ -22,6 +22,11 @@
 
     $discountText = $elements['discount_text']->element_details ?? '27% DISCOUNT OFFER';
 
+    $faqBanner = App\Models\WebSiteElements::where('element', 'faq_banner')->first();
+    $backgroundImage1 = $faqBanner && $faqBanner->element_details
+        ? asset($faqBanner->element_details) // assumes it's stored under /public/
+        : 'https://cdn.pixabay.com/photo/2020/05/10/21/07/habitat-5155539_1280.jpg';
+
 @endphp
 <!-- Responsive CSS -->
 <style>
@@ -1486,12 +1491,10 @@
                     <h1 class="main-title">Journey Across the Globe</h1>
                     <p class="subtitle">Want to escape the daily loop? Plan your trip with Dook International - your gateway to extraordinary travel experiences!</p>
 
-                    <div class="search-box">
-                        <h6 class="mb-3">Destination</h6>
-                        <input type="text" class="form-control" placeholder="Search for Destinations, Attractions, Activities, Experiences & Countries...">
-                        <p class="text-muted small mb-3">Where are you going?</p>
-                        <button class="search-btn">Search</button>
-                    </div>
+                    <form action="{{ route('searchDestination') }}" method="GET" class="search-box">
+    <input type="text" name="q" class="form-control" placeholder="Search for Destination..." required>
+    <button class="search-btn">Search</button>
+</form>
                 </div>
 
                 <div class="col-lg-7">
@@ -2160,76 +2163,31 @@
         </div>
 
         <!-- Swiper Container -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🌟</span>
-                  <h3 class="card-title-12 mb-3">Holistic Learning</h3>
-                  <p class="card-text-12 text-muted">
-                    Daily yoga, digital classes, and creative learning methods.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🏫</span>
-                  <h3 class="card-title-12 mb-3">World-Class Infrastructure</h3>
-                  <p class="card-text-12 text-muted">
-                    Spacious classrooms and advanced laboratories.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🛡️</span>
-                  <h3 class="card-title-12 mb-3">Safety First</h3>
-                  <p class="card-text-12 text-muted">
-                    24/7 CCTV, GPS transport & clean drinking water.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🛡️</span>
-                  <h3 class="card-title-12 mb-3">Safety First</h3>
-                  <p class="card-text-12 text-muted">
-                    24/7 CCTV, GPS transport & clean drinking water.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-30 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🛡️</span>
-                  <h3 class="card-title-12 mb-3">Safety First</h3>
-                  <p class="card-text-12 text-muted">
-                    24/7 CCTV, GPS transport & clean drinking water.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Repeat as needed -->
+        <!-- Swiper Container -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    @foreach($usp as $item)
+      <div class="swiper-slide">
+        <div class="card card-hover-12 feature-card-12 h-15 w-100">
+          <div class="card-body-12">
+           <div class="feature-icon-12 text-center d-flex justify-content-center align-items-center" style="height: 60px;">
+    @if(isset($item->image))
+        <img src="{{ asset($item->image) }}" alt="USP Image" style="max-height: 80px; object-fit: contain;">
+    @else
+        <span style="font-size: 30px;">🌍</span>
+    @endif
+</div>
+            <h3 class="card-title-12 mb-3">{{ $item->heading_top ?? 'No Title' }}</h3>
+            <p class="card-text-12 text-muted">
+              {{ $item->heading_middle ?? 'No description available.' }}
+            </p>
           </div>
         </div>
+      </div>
+    @endforeach
+  </div>
+</div>
+
       </div>
     </section>
 
@@ -2296,7 +2254,7 @@
 
 
 <!-- Start Accordian Section -->
-<section class="cs_primary_bg cs_bg_filed cs_bg_fixed cs_parallax" data-src="https://cdn.pixabay.com/photo/2020/05/10/21/07/habitat-5155539_1280.jpg">
+<section class="cs_primary_bg cs_bg_filed cs_bg_fixed cs_parallax" data-src="{{ $backgroundImage }}" style="background-image: url('{{ $backgroundImage }}');">
   <div class="cs_height_150 cs_height_lg_80"></div>
   <div class="container">
     <div class="row cs_gap_y_40 align-items-center">
@@ -2309,67 +2267,51 @@
       </div>
       <div class="col-xl-6 col-lg-7">
         <div class="cs_accordian_wrap">
-          <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5">
-            <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
-              <span>What type of travel packages does Vacasky offer?</span>
-                <span class="cs_accordian_toggle cs_center">
-                  <i class="fa-regular fa-eye"></i>
-                  <i class="fa-regular fa-eye-slash"></i>
-                </span>
-            </h3>
-            <div class="cs_accordian_body">
-              There are many variations of passages of available but the Ut elit tellus luctus nec ullamcorper at mattis variations of passages of available.
-            </div>
-          </div>
-          <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5 active">
-            <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
-              How do I book a trip with Vacasky?
-                <span class="cs_accordian_toggle cs_center">
-                  <i class="fa-regular fa-eye"></i>
-                  <i class="fa-regular fa-eye-slash"></i>
-                </span>
-            </h3>
-            <div class="cs_accordian_body">
-              There are many variations of passages of available but the Ut elit tellus luctus nec ullamcorper at mattis variations of passages of available.
-            </div>
-          </div>
-          <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5">
-            <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
-              What is the payment process for Vacasky?
-              <span class="cs_accordian_toggle cs_center">
-                <i class="fa-regular fa-eye"></i>
-                <i class="fa-regular fa-eye-slash"></i>
-              </span>
-            </h3>
-            <div class="cs_accordian_body">
-              There are many variations of passages of available but the Ut elit tellus luctus nec ullamcorper at mattis variations of passages of available.
-            </div>
-          </div>
-          <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5">
-            <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
-              What Payment Methods are Supported?
-                <span class="cs_accordian_toggle cs_center">
-                  <i class="fa-regular fa-eye"></i>
-                  <i class="fa-regular fa-eye-slash"></i>
-                </span>
-            </h3>
-            <div class="cs_accordian_body">
-              There are many variations of passages of available but the Ut elit tellus luctus nec ullamcorper at mattis variations of passages of available.
-            </div>
-          </div>
-          <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5">
-            <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
-              How to cancel my booking in Vacasky?
-                <span class="cs_accordian_toggle cs_center">
-                  <i class="fa-regular fa-eye"></i>
-                  <i class="fa-regular fa-eye-slash"></i>
-                </span>
-            </h3>
-            <div class="cs_accordian_body">
-              There are many variations of passages of available but the Ut elit tellus luctus nec ullamcorper at mattis variations of passages of available.
-            </div>
-          </div>
+  @if (!empty($faqs) && $faqs->count())
+    @foreach ($faqs as $index => $faq)
+      <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5 {{ $index === 0 ? 'active' : '' }}">
+        <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
+          <span>{{ $faq->question }}</span>
+          <span class="cs_accordian_toggle cs_center">
+            <i class="fa-regular fa-eye"></i>
+            <i class="fa-regular fa-eye-slash"></i>
+          </span>
+        </h3>
+        <div class="cs_accordian_body">
+          {!! nl2br(e($faq->answer)) !!}
         </div>
+      </div>
+    @endforeach
+  @else
+    {{-- Static fallback content --}}
+    <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5 active">
+      <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
+        <span>What type of travel packages does Vacasky offer?</span>
+        <span class="cs_accordian_toggle cs_center">
+          <i class="fa-regular fa-eye"></i>
+          <i class="fa-regular fa-eye-slash"></i>
+        </span>
+      </h3>
+      <div class="cs_accordian_body">
+        There are many variations of passages of available but the Ut elit tellus luctus nec ullamcorper at mattis variations of passages of available.
+      </div>
+    </div>
+    <div class="cs_accordian cs_style_1 cs_white_bg cs_radius_5">
+      <h3 class="cs_accordian_head cs_fs_20 cs_semibold mb-0">
+        <span>How do I book a trip with Vacasky?</span>
+        <span class="cs_accordian_toggle cs_center">
+          <i class="fa-regular fa-eye"></i>
+          <i class="fa-regular fa-eye-slash"></i>
+        </span>
+      </h3>
+      <div class="cs_accordian_body">
+        Booking is easy. Choose a package, complete the booking form, and our team will handle the rest.
+      </div>
+    </div>
+    <!-- Add more static FAQ blocks here -->
+  @endif
+</div>
+
       </div>
     </div>
   </div>
@@ -2891,323 +2833,103 @@
 
 
 <section class="cs_accent_bg_1">
-    <div class="cs_height_135 cs_height_lg_75"></div>
-     <div class="container">
+  <div class="cs_height_135 cs_height_lg_75"></div>
+  <div class="container">
     <div class="cs_section_heading cs_style_1 text-center">
       <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">News & Blogs</h3>
-      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Last Minute Amazing Deals</h2>
+      <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+        Last Minute Amazing Deals
+      </h2>
     </div>
-      <div class="cs_height_55 cs_height_lg_40"></div>
- <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-  <div class="carousel-inner">
+    <div class="cs_height_55 cs_height_lg_40"></div>
 
-    <!-- First Slide -->
-    <div class="carousel-item active">
-      <div class="d-flex">
-        <!-- Card 1 -->
-        <div class="carousel-card-blog px-2">
-          <!-- Your card HTML -->
-          <article class="cs_post cs_style_2 cs_white_bg">
-            <a href="{{ route('blogdetails') }}" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
-              <img src="https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg" alt="Post Thumb" class="cs_zoom_in">
-              <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">30 May</div>
-              <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
-            </a>
-            <div class="cs_post_info">
-              <ul class="cs_post_meta cs_mp0">
-                <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">admin</a></li>
-                <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">4 comments</a></li>
-              </ul>
-              <h2 class="cs_post_title cs_fs_24 cs_semibold">
-                <a href="{{ route('blogdetails') }}">Travel the most beautiful places in the world</a>
-              </h2>
-              <hr>
-              <a href="{{ route('blogdetails') }}" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
-                Read More <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </div>
-          </article>
-        </div>
+    <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex">
 
-        <!-- Repeat for Card 2 -->
-        <div class="carousel-card-blog px-2">
-         <article class="cs_post cs_style_2 cs_white_bg">
-            <a href="{{ route('blogdetails') }}" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
-              <img src="https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg" alt="Post Thumb" class="cs_zoom_in">
-              <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">30 May</div>
-              <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
-            </a>
-            <div class="cs_post_info">
-              <ul class="cs_post_meta cs_mp0">
-                <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">admin</a></li>
-                <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">4 comments</a></li>
-              </ul>
-              <h2 class="cs_post_title cs_fs_24 cs_semibold">
-                <a href="{{ route('blogdetails') }}">Travel the most beautiful places in the world</a>
-              </h2>
-              <hr>
-              <a href="{{ route('blogdetails') }}" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
-                Read More <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </div>
-          </article>
-        </div>
+            @forelse($blogs->take(6)->chunk(3) as $chunk)
+              @foreach($chunk as $blog)
+              <div class="carousel-card-blog px-2 {{ $loop->index >= 2 ? 'd-none d-lg-block' : '' }}">
+                <article class="cs_post cs_style_2 cs_white_bg">
+                  <a href="{{ route('blogdetail', $blog->slug) }}" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
+                    <img src="{{ asset($blog->image ?? 'https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg') }}" alt="Post Thumb" class="cs_zoom_in">
+                    <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">
+                      {{ \Carbon\Carbon::parse($blog->blog_date)->format('d M') }}
+                    </div>
+                    <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
+                  </a>
+                  <div class="cs_post_info">
+                    <ul class="cs_post_meta cs_mp0">
+                      <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">{{ $blog->blog_author ?? 'admin' }}</a></li>
+                      <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">0 comments</a></li>
+                    </ul>
+                    <h2 class="cs_post_title cs_fs_24 cs_semibold">
+                      <a href="{{ route('blogdetail', $blog->slug) }}">{{ $blog->title }}</a>
+                    </h2>
 
-        <!-- Repeat for Card 3 -->
-        <div class="carousel-card-blog px-2 d-none d-lg-block">
-          <article class="cs_post cs_style_2 cs_white_bg">
-            <a href="{{ route('blogdetails') }}" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
-              <img src="https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg" alt="Post Thumb" class="cs_zoom_in">
-              <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">30 May</div>
-              <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
-            </a>
-            <div class="cs_post_info">
-              <ul class="cs_post_meta cs_mp0">
-                <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">admin</a></li>
-                <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">4 comments</a></li>
-              </ul>
-              <h2 class="cs_post_title cs_fs_24 cs_semibold">
-                <a href="{{ route('blogdetails') }}">Travel the most beautiful places in the world</a>
-              </h2>
-              <hr>
-              <a href="{{ route('blogdetails') }}" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
-                Read More <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </div>
-          </article>
+                    @if(!empty($blog->short_content))
+                      <p class="cs_fs_16 cs_text_line_height mb-2">
+                        {{ Str::limit(strip_tags($blog->short_content), 100) }}
+                      </p>
+                    @else
+                      <p class="cs_fs_16 cs_text_line_height mb-2">
+                        {{ Str::limit(strip_tags($blog->blog_content ?? ''), 100) }}
+                      </p>
+                    @endif
+
+                    <hr>
+                    <a href="{{ route('blogdetail', $blog->slug) }}" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
+                      Read More <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              @endforeach
+            @empty
+              {{-- Static fallback cards --}}
+              @for($i = 0; $i < 3; $i++)
+              <div class="carousel-card-blog px-2 {{ $i >= 2 ? 'd-none d-lg-block' : '' }}">
+                <article class="cs_post cs_style_2 cs_white_bg">
+                  <a href="#" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
+                    <img src="https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg" alt="Post Thumb" class="cs_zoom_in">
+                    <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">30 May</div>
+                    <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
+                  </a>
+                  <div class="cs_post_info">
+                    <ul class="cs_post_meta cs_mp0">
+                      <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">admin</a></li>
+                      <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">4 comments</a></li>
+                    </ul>
+                    <h2 class="cs_post_title cs_fs_24 cs_semibold">
+                      <a href="#">Travel the most beautiful places in the world</a>
+                    </h2>
+                    <p class="cs_fs_16 cs_text_line_height mb-2">
+                      Discover hidden gems and top destinations to explore on your next adventure.
+                    </p>
+                    <hr>
+                    <a href="#" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
+                      Read More <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              @endfor
+            @endforelse
+
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Second Slide -->
-    <div class="carousel-item">
-      <div class="d-flex">
-        <!-- Card 4 -->
-        <div class="carousel-card-blog px-2">
-        <article class="cs_post cs_style_2 cs_white_bg">
-            <a href="{{ route('blogdetails') }}" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
-              <img src="https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg" alt="Post Thumb" class="cs_zoom_in">
-              <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">30 May</div>
-              <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
-            </a>
-            <div class="cs_post_info">
-              <ul class="cs_post_meta cs_mp0">
-                <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">admin</a></li>
-                <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">4 comments</a></li>
-              </ul>
-              <h2 class="cs_post_title cs_fs_24 cs_semibold">
-                <a href="{{ route('blogdetails') }}">Travel the most beautiful places in the world</a>
-              </h2>
-              <hr>
-              <a href="{{ route('blogdetails') }}" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
-                Read More <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="carousel-card-blog px-2">
-         <article class="cs_post cs_style_2 cs_white_bg">
-            <a href="{{ route('blogdetails') }}" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
-              <img src="https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg" alt="Post Thumb" class="cs_zoom_in">
-              <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">30 May</div>
-              <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
-            </a>
-            <div class="cs_post_info">
-              <ul class="cs_post_meta cs_mp0">
-                <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">admin</a></li>
-                <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">4 comments</a></li>
-              </ul>
-              <h2 class="cs_post_title cs_fs_24 cs_semibold">
-                <a href="{{ route('blogdetails') }}">Travel the most beautiful places in the world</a>
-              </h2>
-              <hr>
-              <a href="{{ route('blogdetails') }}" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
-                Read More <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Card 6 or clone -->
-        <div class="carousel-card-blog px-2 d-none d-lg-block">
-         <article class="cs_post cs_style_2 cs_white_bg">
-            <a href="{{ route('blogdetails') }}" class="cs_post_thumb cs_zoom overflow-hidden position-relative">
-              <img src="https://cdn.pixabay.com/photo/2020/03/14/14/07/asia-4930731_1280.jpg" alt="Post Thumb" class="cs_zoom_in">
-              <div class="cs_posted_by cs_radius_2 cs_fs_16 cs_medium cs_white_color position-absolute">30 May</div>
-              <div class="cs_post_overlay cs_radius_5 position-absolute"></div>
-            </a>
-            <div class="cs_post_info">
-              <ul class="cs_post_meta cs_mp0">
-                <li><span class="cs_primary_color"><i class="fa-regular fa-circle-user"></i></span>By <a href="#">admin</a></li>
-                <li><span class="cs_primary_color"><i class="fa-regular fa-comment"></i></span><a href="#">4 comments</a></li>
-              </ul>
-              <h2 class="cs_post_title cs_fs_24 cs_semibold">
-                <a href="{{ route('blogdetails') }}">Travel the most beautiful places in the world</a>
-              </h2>
-              <hr>
-              <a href="{{ route('blogdetails') }}" class="cs_post_btn cs_fs_18 cs_medium cs_primary_color">
-                Read More <i class="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-
   </div>
-</div>
-     </div>
 </section>
+
+
 
 
 {{-- hero part start js --}}
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Search functionality
-        document.querySelector('.search-btn').addEventListener('click', function() {
-            const destination = document.querySelector('.form-control').value;
-            if (destination.trim()) {
-                alert(`Searching for tours to: ${destination}`);
-            } else {
-                alert('Please enter a destination to search');
-            }
-        });
-
-        // Enter key functionality for search
-        document.querySelector('.form-control').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                document.querySelector('.search-btn').click();
-            }
-        });
-
-        // Auto-cycling tour cards functionality
-        class TourCarousel {
-            constructor() {
-                this.currentSlide = 0;
-                this.totalSlides = 4; // We have 4 different sets to show
-                this.slideInterval = 4000; // 4 seconds
-                this.allCards = document.querySelectorAll('.tour-grid-item');
-                this.indicators = document.querySelectorAll('.indicator');
-                this.isTransitioning = false;
-
-                this.init();
-            }
-
-            init() {
-                // Start auto-cycling after initial 6 cards are shown
-                setTimeout(() => {
-                    this.startAutoCycle();
-                }, 3000);
-
-                // Add indicator click handlers
-                this.indicators.forEach((indicator, index) => {
-                    indicator.addEventListener('click', () => {
-                        if (!this.isTransitioning) {
-                            this.goToSlide(index);
-                        }
-                    });
-                });
-            }
-
-            startAutoCycle() {
-                setInterval(() => {
-                    if (!this.isTransitioning) {
-                        this.nextSlide();
-                    }
-                }, this.slideInterval);
-            }
-
-            nextSlide() {
-                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-                this.updateSlide();
-            }
-
-            goToSlide(slideIndex) {
-                this.currentSlide = slideIndex;
-                this.updateSlide();
-            }
-
-            updateSlide() {
-                if (this.isTransitioning) return;
-
-                this.isTransitioning = true;
-
-                // Update indicators
-                this.indicators.forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === this.currentSlide);
-                });
-
-                // Hide all cards first
-                this.allCards.forEach(card => {
-                    card.style.display = 'none';
-                    card.querySelector('.tour-card').classList.remove('visible');
-                });
-
-                // Determine which cards to show based on current slide
-                let cardsToShow = [];
-
-                switch(this.currentSlide) {
-                    case 0:
-                        // Original 6 cards
-                        cardsToShow = [0, 1, 2, 3, 4, 5];
-                        break;
-                    case 1:
-                        // Cycle in card 6 (Dubai), keep others
-                        cardsToShow = [6, 1, 2, 3, 4, 5];
-                        break;
-                    case 2:
-                        // Cycle in card 7 (Istanbul), shift others
-                        cardsToShow = [6, 7, 2, 3, 4, 5];
-                        break;
-                    case 3:
-                        // Cycle in card 8 (Silk Road), shift others
-                        cardsToShow = [6, 7, 8, 3, 4, 5];
-                        break;
-                }
-
-                // Show selected cards with staggered animation
-                cardsToShow.forEach((cardIndex, position) => {
-                    if (this.allCards[cardIndex]) {
-                        setTimeout(() => {
-                            this.allCards[cardIndex].style.display = 'block';
-
-                            // Trigger reflow
-                            this.allCards[cardIndex].offsetHeight;
-
-                            setTimeout(() => {
-                                this.allCards[cardIndex].querySelector('.tour-card').classList.add('visible');
-                            }, 50);
-                        }, position * 100);
-                    }
-                });
-
-                // Reset transition flag
-                setTimeout(() => {
-                    this.isTransitioning = false;
-                }, 800);
-            }
-        }
-
-        // Initialize the carousel when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            new TourCarousel();
-
-            // Add hover effects to visible cards
-            document.addEventListener('mouseover', function(e) {
-                if (e.target.closest('.tour-card')) {
-                    e.target.closest('.tour-card').style.transform = 'translateY(-8px)';
-                }
-            });
-
-            document.addEventListener('mouseout', function(e) {
-                if (e.target.closest('.tour-card')) {
-                    e.target.closest('.tour-card').style.transform = 'translateY(0)';
-                }
-            });
-        });
-    </script>
+    
 
 
 

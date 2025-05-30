@@ -86,7 +86,15 @@ class DestinationController extends Controller
     return $return;
 }
 
+public function search(DestinationRequest $request)
+{
+    $query = trim($request->input('q'));
 
+    // Optional: slugify the query if it's already matching slugs
+    $slug = \Str::slug($query);
+
+    return redirect()->route('destinationDetailpage', ['destination_slug' => $slug]);
+}
 public function updateData(DestinationRequest $request)
 {
     $checkDuplicate = DestinationModel::where([

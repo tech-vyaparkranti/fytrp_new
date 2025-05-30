@@ -6,6 +6,8 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\EnquiryFormController;
+use App\Http\Controllers\DestinationController;
+
 
 Route::controller(HomeController::class)->group(function () {
 Route::get('/', 'index')->name('index');
@@ -19,6 +21,8 @@ Route::get('/hotel-detsils/{slug}','hotelDetails')->name('hotelDetails');
 
 Route::get('/destinationdetails','destinationdetails')->name('destinationdetails');
 Route::get("destination/{destination_slug}",[HomeController::class,"destinationDetailpage"])->name("destinationDetailpage");
+Route::get('/search-destination', [HomeController::class, 'searchDestination'])->name('searchDestination');
+
 
 Route::get('/packages','tour')->name('tour');
 Route::get('/tourdetails','tourdetails')->name('tourdetails');

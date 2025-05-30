@@ -63,6 +63,27 @@ class HomeController extends Controller
     $homedestinations = DestinationModel::where('status', '1')->get();
     $majorattraction = Attraction::where('status', '1')->get();
 $faqs = Faq::where('status', '1')->orderBy('sort_order', 'asc')->get();
+$usp = USPModel::where('status', '1')->orderBy('slide_sorting', 'asc')->get();
+if ($usp->isEmpty()) {
+    $usp = collect([
+        (object)[
+            'usp_icon' => '🌟',
+            'usp_title' => 'Holistic Learning',
+            'usp_description' => 'Daily yoga, digital classes, and creative learning methods.',
+        ],
+        (object)[
+            'usp_icon' => '🏫',
+            'usp_title' => 'World-Class Infrastructure',
+            'usp_description' => 'Spacious classrooms and advanced laboratories.',
+        ],
+        (object)[
+            'usp_icon' => '🛡️',
+            'usp_title' => 'Safety First',
+            'usp_description' => '24/7 CCTV, GPS transport & clean drinking water.',
+        ],
+    ]);
+}
+
 
 
 
@@ -78,9 +99,24 @@ $faqs = Faq::where('status', '1')->orderBy('sort_order', 'asc')->get();
         'homedestinations',
         'majorattraction',
         'faqs',
+        'usp',
     ));
 }
 
+public function searchDestination(Request $request)
+{
+    $query = $request->input('q');
+
+    // Case-insensitive match
+    $destination = DestinationModel::whereRaw('LOWER(destination) = ?', [strtolower($query)])->first();
+
+    if ($destination) {
+        return redirect()->route('destinationDetailpage', ['destination_slug' => $destination->destination_slug]);
+    }
+
+    // Optional: Redirect to 404 or show a custom message
+    return redirect('/')->with('error', 'Destination not found.');
+}
     
     public function index2()
     {
