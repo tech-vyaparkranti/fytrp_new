@@ -192,6 +192,14 @@
                   <div data-i18n="Analytics">Manage Partners</div>
                 </a>
               </li>
+
+              <li class="menu-item">
+                <a href="{{route("manage-faq.index")}}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-book-content"></i>
+                  <div data-i18n="Analytics">Manage FAQ</div>
+                </a>
+              </li>
+
               <li class="menu-item">
                 <a href="{{route("ourteamSlider")}}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-images"></i>

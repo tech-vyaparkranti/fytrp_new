@@ -48,6 +48,7 @@ class WebSiteElementsController extends Controller
         "aboutus_content_points",
         "discount_banner",
         "discount_text",
+        "faq_banner",
     ];
     public function addWebSiteElements()
     {

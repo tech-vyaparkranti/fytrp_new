@@ -16,6 +16,7 @@ use App\Models\TestimonialModel;
 use App\Models\HomeRecognitionsModel;
 use App\Models\BookHotel;
 use App\Models\Attraction;
+use App\Models\Faq;
 
 class HomeController extends Controller
 {
@@ -61,7 +62,8 @@ class HomeController extends Controller
     $partners = HomeRecognitionsModel::where(HomeRecognitionsModel::SLIDE_STATUS, HomeRecognitionsModel::SLIDE_STATUS_LIVE)->get();
     $homedestinations = DestinationModel::where('status', '1')->get();
     $majorattraction = Attraction::where('status', '1')->get();
-    $discountBanner = WebsiteElements::where('element', 'discount_banner')->first();
+$faqs = Faq::where('status', '1')->orderBy('sort_order', 'asc')->get();
+
 
 
     return view('index', $data, compact(
@@ -75,7 +77,7 @@ class HomeController extends Controller
         'partners',
         'homedestinations',
         'majorattraction',
-        'discountBanner',
+        'faqs',
     ));
 }
 

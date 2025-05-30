@@ -23,6 +23,7 @@ use App\Http\Controllers\WebSiteElementsController;
 use App\Http\Controllers\HomeDestinationsController;
 use App\Http\Controllers\HomeRecognitionsController;
 use App\Http\Controllers\BookHotelController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\OurServicesModelController;
 use App\Http\Controllers\TourTypeController;
 
@@ -72,6 +73,10 @@ Route::middleware(['auth'])->group(function () {
     // Route::get("services-admin", [ServicesController::class, "servicesSlider"])->name("servicesSlider");
     // Route::post("services", [ServicesController::class, "servicesSaveSlide"])->name("servicesSaveSlide");
     // Route::post("services-data", [ServicesController::class, "servicesData"])->name("servicesData");
+    Route::resource('manage-faq', FaqController::class);
+    Route::post('/faqs/data', [FaqController::class, 'faqData'])->name('faqData');
+Route::post('/faqs/save', [FaqController::class, 'store'])->name('faqSave');
+Route::post('/faqs/toggle-status', [FaqController::class, 'toggleStatus'])->name('faqToggleStatus');
 
      Route::resource('manage-attraction', AttractionController::class);
      Route::post('/save-attraction', [AttractionController::class, 'storeOrUpdate'])->name('saveAttraction');
