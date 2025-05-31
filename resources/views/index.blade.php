@@ -1594,8 +1594,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
             <div class="tour-grid-item" style="display: none;">
                                 <div class="tour-card dubai-card colored-card">
                                     <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=200&fit=crop');">
@@ -1617,91 +1615,8 @@
                                 </div>
                             </div>
 
-                            <div class="tour-grid-item">
-                                <div class="tour-card georgia-card colored-card visible">
-                                    <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=400&h=200&fit=crop');">
-                                        <div class="nights-badge">6 Nights</div>
-                                    </div>
-                                    <div class="tour-content">
-                                        <h5 class="tour-title">Georgia Heritage Experience</h5>
-                                        <div class="tour-icons">
-                                            <div class="tour-icon"><i class="fas fa-plane"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-hotel"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-car"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-utensils"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-users"></i></div>
-                                        </div>
-                                        <div class="price-section">
-                                            <span class="original-price">₹1,15,490</span>
-                                            <span class="current-price">₹1,09,990</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <div class="tour-grid-item">
-                                <div class="tour-card baku-card colored-card visible">
-                                    <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1580837119756-563d608dd119?w=400&h=200&fit=crop');">
-                                        <div class="nights-badge">6 Nights</div>
-                                    </div>
-                                    <div class="tour-content">
-                                        <h5 class="tour-title">Baku Adventure Tour</h5>
-                                        <div class="tour-icons">
-                                            <div class="tour-icon"><i class="fas fa-plane"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-hotel"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-car"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-utensils"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-users"></i></div>
-                                        </div>
-                                        <div class="price-section">
-                                            <span class="original-price">₹1,15,490</span>
-                                            <span class="current-price">₹1,09,990</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tour-grid-item">
-                                <div class="tour-card almaty-card colored-card visible">
-                                    <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=200&fit=crop');">
-                                        <div class="nights-badge">6 Nights</div>
-                                    </div>
-                                    <div class="tour-content">
-                                        <h5 class="tour-title">Almaty Special Package</h5>
-                                        <div class="tour-icons">
-                                            <div class="tour-icon"><i class="fas fa-plane"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-hotel"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-car"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-utensils"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-users"></i></div>
-                                        </div>
-                                        <div class="price-section">
-                                            <span class="original-price">₹1,15,490</span>
-                                            <span class="current-price">₹1,09,990</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tour-grid-item">
-                                <div class="tour-card tbilisi-card colored-card visible">
-                                    <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=400&h=200&fit=crop');">
-                                        <div class="nights-badge">6 Nights</div>
-                                    </div>
-                                    <div class="tour-content">
-                                        <h5 class="tour-title">Tbilisi & Batumi Highlights</h5>
-                                        <div class="tour-icons">
-                                            <div class="tour-icon"><i class="fas fa-plane"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-car"></i></div>
-                                            <div class="tour-icon"><i class="fas fa-utensils"></i></div>
-                                        </div>
-                                        <div class="price-section">
-                                            <span class="original-price">₹1,03,436</span>
-                                            <span class="current-price">₹98,510</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                             
         @endif
     </div>
 </div>
@@ -1909,87 +1824,7 @@
                             </div>
                         </div>
 
-                        <div class="tour-card-2">
-                            <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=400&h=250&fit=crop" alt="Singapore Delight">
-                                <div class="best-selling">BEST SELLING</div>
-                            </div>
-                            <div class="card-content">
-                                <h3 class="cs_card_title cs_fs_24 cs_semibold">Singapore Delight</h3>
-                                <div class="duration">4 Days 3 Nights</div>
-                                <div class="rating">
-                                    <span class="stars">★★★★★</span>
-                                </div>
-                                <div class="tour-icons">
-                                    <i class="fas fa-plane tour-icon" style="color: #e74c3c;"></i>
-                                    <i class="fas fa-building tour-icon" style="color: #3498db;"></i>
-                                    <i class="fas fa-tree tour-icon" style="color: #27ae60;"></i>
-                                    <i class="fas fa-star tour-icon" style="color: #f39c12;"></i>
-                                </div>
-                                <div class="pricing">
-                                    <div>
-                                        <div class="original-price">₹72,500</div>
-                                        <div class="current-price">₹67,890</div>
-                                    </div>
-                                    <div class="discount-badge">6% OFF</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tour-card-2">
-                            <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=400&h=250&fit=crop" alt="Singapore Delight">
-                                <div class="best-selling">BEST SELLING</div>
-                            </div>
-                            <div class="card-content">
-                                <h3 class="cs_card_title cs_fs_24 cs_semibold">Singapore Delight</h3>
-                                <div class="duration">4 Days 3 Nights</div>
-                                <div class="rating">
-                                    <span class="stars">★★★★★</span>
-                                </div>
-                                <div class="tour-icons">
-                                    <i class="fas fa-plane tour-icon" style="color: #e74c3c;"></i>
-                                    <i class="fas fa-building tour-icon" style="color: #3498db;"></i>
-                                    <i class="fas fa-tree tour-icon" style="color: #27ae60;"></i>
-                                    <i class="fas fa-star tour-icon" style="color: #f39c12;"></i>
-                                </div>
-                                <div class="pricing">
-                                    <div>
-                                        <div class="original-price">₹72,500</div>
-                                        <div class="current-price">₹67,890</div>
-                                    </div>
-                                    <div class="discount-badge">6% OFF</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tour-card-2">
-                            <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=400&h=250&fit=crop" alt="Singapore Delight">
-                                <div class="best-selling">BEST SELLING</div>
-                            </div>
-                            <div class="card-content">
-                                <h3 class="cs_card_title cs_fs_24 cs_semibold">Singapore Delight</h3>
-                                <div class="duration">4 Days 3 Nights</div>
-                                <div class="rating">
-                                    <span class="stars">★★★★★</span>
-                                </div>
-                                <div class="tour-icons">
-                                    <i class="fas fa-plane tour-icon" style="color: #e74c3c;"></i>
-                                    <i class="fas fa-building tour-icon" style="color: #3498db;"></i>
-                                    <i class="fas fa-tree tour-icon" style="color: #27ae60;"></i>
-                                    <i class="fas fa-star tour-icon" style="color: #f39c12;"></i>
-                                </div>
-                                <div class="pricing">
-                                    <div>
-                                        <div class="original-price">₹72,500</div>
-                                        <div class="current-price">₹67,890</div>
-                                    </div>
-                                    <div class="discount-badge">6% OFF</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        
             {{-- You can add more static cards here if needed --}}
         </div>
     </div>
