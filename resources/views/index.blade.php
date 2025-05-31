@@ -1501,6 +1501,7 @@
 
                     <div class="tour-grid-container">
                         <div class="tour-grid" id="tourGrid">
+                          @if($packages && count($packages) > 0)
    @foreach ($packages as $package)
              {{-- <a href="{{ route('tourDetailpage', $package->slug) }}"> --}}
 
@@ -1550,9 +1551,74 @@
     </div>
 @endforeach
 
-</div>
-
+@else
+            {{-- Static fallback HTML when $packages is empty --}}
+            <div class="tour-grid-item">
+                <div class="tour-card georgia-card colored-card visible">
+                    <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=200&fit=crop');">
+                        <div class="nights-badge">6 Nights</div>
                     </div>
+                    <div class="tour-content">
+                        <h5 class="tour-title">Treasures of Georgia and Armenia</h5>
+                        <div class="tour-icons">
+                            <div class="tour-icon"><i class="fas fa-plane"></i></div>
+                            <div class="tour-icon"><i class="fas fa-hotel"></i></div>
+                            <div class="tour-icon"><i class="fas fa-car"></i></div>
+                            <div class="tour-icon"><i class="fas fa-utensils"></i></div>
+                        </div>
+                        <div class="price-section">
+                            <span class="original-price">₹1,21,108</span>
+                            <span class="current-price">₹1,15,417</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                <div class="tour-grid-item" style="display: none;">
+                                <div class="tour-card tbilisi-card colored-card">
+                                    <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1539650116574-75c0c6d73c4e?w=400&h=200&fit=crop');">
+                                        <div class="nights-badge">8 Nights</div>
+                                    </div>
+                                    <div class="tour-content">
+                                        <h5 class="tour-title">Silk Road Explorer Package</h5>
+                                        <div class="tour-icons">
+                                            <div class="tour-icon"><i class="fas fa-plane"></i></div>
+                                            <div class="tour-icon"><i class="fas fa-hotel"></i></div>
+                                            <div class="tour-icon"><i class="fas fa-car"></i></div>
+                                            <div class="tour-icon"><i class="fas fa-utensils"></i></div>
+                                            <div class="tour-icon"><i class="fas fa-mountain"></i></div>
+                                        </div>
+                                        <div class="price-section">
+                                            <span class="original-price">₹1,35,000</span>
+                                            <span class="current-price">₹1,29,990</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <div class="tour-grid-item" style="display: none;">
+                                <div class="tour-card dubai-card colored-card">
+                                    <div class="tour-image" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=200&fit=crop');">
+                                        <div class="nights-badge">5 Nights</div>
+                                    </div>
+                                    <div class="tour-content">
+                                        <h5 class="tour-title">Dubai Desert Safari & City Tour</h5>
+                                        <div class="tour-icons">
+                                            <div class="tour-icon"><i class="fas fa-plane"></i></div>
+                                            <div class="tour-icon"><i class="fas fa-hotel"></i></div>
+                                            <div class="tour-icon"><i class="fas fa-car"></i></div>
+                                            <div class="tour-icon"><i class="fas fa-utensils"></i></div>
+                                        </div>
+                                        <div class="price-section">
+                                            <span class="original-price">₹95,000</span>
+                                            <span class="current-price">₹89,990</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        @endif
+    </div>
+</div>
 
                     <div class="tour-indicators" id="tourIndicators">
                         <div class="indicator active" data-slide="0"></div>
