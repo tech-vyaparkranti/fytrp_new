@@ -43,7 +43,7 @@
       use your IP address to help diagnose problems with our server, and to administer our Website. Your IP address is
       also used to help identify you and to gather broad demographic information.</p>
     <h5>COOKIE POLICY</h5>
-    <p class="text-justify"> https://www.book365days.com/, operates a strict privacy policy and we are committed to being
+    <p class="text-justify"> https://flyingtriponline.com/, operates a strict privacy policy and we are committed to being
       transparent about how we use cookies on our website.</p>
     <h5>Why are cookies important?</h5>
     <p class="text-justify">Cookies help you make your online experience more efficient and relevant to your interests.

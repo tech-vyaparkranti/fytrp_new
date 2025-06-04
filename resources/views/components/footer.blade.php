@@ -18,6 +18,7 @@
 
 
 @endphp
+
 <footer class="cs_footer cs_style_1 cs_white_color cs_bg_filed cs_primary_bg" data-src="{{ asset('assets/images/footer_bg.jpeg') }}">
       <div class="cs_newsletter_1_wrap">
 
@@ -156,7 +157,7 @@
           </div>
           <div class="cs_footer_main_col">
             <div class="cs_footer_widget">
-              <h3 class="cs_footer_widget_title cs_fs_24 cs_semibold cs_white_color">Useful Links</h3>
+              <h3 class="cs_footer_widget_title cs_fs_24 cs_semibold cs_white_color">Quick Links</h3>
               <ul class="cs_menu_widget">
                 <li><a href="{{ route('index') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About Us</a></li>
@@ -167,12 +168,12 @@
                 <li><a href="{{ route('blog') }}">Blogs</a></li>
 
                 <li><a href="{{ route('destinations') }}">Services</a></li>
-                <li><a href="{{ route(name: 'privacypolicy') }}">Privacy Policy</a></li>
+                {{-- <li><a href="{{ route(name: 'privacypolicy') }}">Privacy Policy</a></li> --}}
 
                 <li><a href="{{ route('galleryPages') }}">Gallery</a></li>
-                <li><a href="{{ route(name: 'termsConditions') }}">Terms and Conditions</a></li>
-                <li></li>
-                <li><a href="{{ route(name: 'CancellationRefundPolicy') }}">Refund Policy</a></li>
+                {{-- <li><a href="{{ route(name: 'termsConditions') }}">Terms and Conditions</a></li> --}}
+                {{-- <li></li> --}}
+                {{-- <li><a href="{{ route(name: 'CancellationRefundPolicy') }}">Refund Policy</a></li> --}}
 
 
 
@@ -220,16 +221,25 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="cs_footer_botto text-center pb-4">
-          <!-- <div class="cs_copyright">Copyright © 2024 book365days All rights reserved by vyapa</div> -->
-          © 2025 All Rights Reserved by Flying Trip Online. Developed by <a href="https://vyaparkranti.com/" target="_blank">Vyapar kranti</a>
-
-          <ul class="cs_menu_widget_2 cs_mp0">
-            <li><a href="#"></a></li>
-          </ul>
-        </div>
+     <div class="container">
+  <div class="cs_footer_botto pb-4 text-center">
+    <div style="display: inline-flex; align-items: center; gap: 50px; justify-content: center; flex-wrap: wrap;">
+      <div>
+        © 2025 All Rights Reserved by Flying Trip Online. Developed by
+        <a href="https://vyaparkranti.com/" target="_blank" rel="noopener noreferrer">Vyapar kranti</a>
       </div>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a href="{{ route(name: 'privacypolicy') }}">Privacy Policy</a></li>
+        <li class="list-inline-item">|</li>
+        <li class="list-inline-item"><a href="{{ route(name: 'termsConditions') }}">Terms and Conditions</a></li>
+        <li class="list-inline-item">|</li>
+        <li class="list-inline-item"><a href="{{ route(name: 'CancellationRefundPolicy') }}">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
     </footer>
     <input id="enquiry" hidden="" type="checkbox">
 <section class="enquiry-form">
@@ -254,7 +264,7 @@
 </section>
 
 <!-- Enquiry Modal -->
-<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true"  >
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -262,7 +272,9 @@
           <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" width="24" />
           Send us a Query
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" style="background-color: brown">Cancel</button>
+
+
       </div>
       <div class="modal-body">
         <p>Ready to venture out into the world? Fill the form below and start your brand new journey with us</p>
@@ -289,7 +301,7 @@
             </div>
           </div>
           <div class="text-center mt-4">
-            <button type="submit" class="btn btn-danger">Submit</button>
+            <button type="submit" class="btn btn-danger" style="background-color: black; border-color: black;">Submit</button>
           </div>
         </form>
       </div>
@@ -358,6 +370,164 @@
     }
 </style>
 
+
+
+
+
+
+{{--
+
+    <style>
+        /* Custom backdrop blur effect with unique class */
+        .travel-enquiry-modal-backdrop {
+            background-color: rgb(245, 241, 241) !important;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        /* Remove the white background from modal with unique class */
+                .travel-enquiry-modal {
+        background-color: rgb(250 250 250 / 23%) !important; /* ~28% opacity */
+        }
+
+
+        .travel-enquiry-form-section {
+            position: fixed;
+            top: 50%;
+            right: -0%;
+            z-index: 99;
+            transition: var(--transition);
+            margin-left: 40px;
+            transform: translateY(-50%);
+            margin-right: -400px;
+        }
+
+        .travel-enquiry-button a {
+            transform: rotate(-90deg);
+            top: 50%;
+            left: calc(0% - 40px - 40px);
+            cursor: pointer;
+            margin: 0 0;
+            color: #ffffff;
+            height: 40px;
+            user-select: none;
+            -moz-user-select: none;
+            line-height: 40px;
+            padding: 0 15px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            background: var(--primary);
+            -webkit-animation: liner_bg 5s ease infinite;
+            animation: liner_bg 5s ease-in-out infinite;
+            background-size: 300% 300%;
+            position: absolute;
+            border: 1px solid rgb(var(--black-color));
+        }
+
+        .travel-enquiry-button a:hover {
+            background-color: white;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .travel-contact-form-box {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 400px;
+            min-width: 400px;
+            margin: 1rem auto;
+            width: 100%;
+        }
+
+        .travel-btn-primary {
+            color: #fff;
+            border-color: var(--primary-color) !important;
+            background-color: var(--primary-color) !important;
+            text-align: center;
+        }
+
+        /* Demo styles for background content with unique class */
+        .travel-demo-content {
+            padding: 50px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            min-height: 100vh;
+            color: white;
+            font-size: 18px;
+        }
+
+        .travel-demo-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+    </style>
+
+
+    <!-- Modal with unique class names -->
+    <div class="modal fade travel-enquiry-modal" id="travelEnquiryModal" tabindex="-1" aria-labelledby="travelEnquiryModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="travelEnquiryModalLabel">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" width="24" />
+                        Send us a Query
+                    </h5>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close" style="background-color: brown">
+                        Cancel
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ready to venture out into the world? Fill the form below and start your brand new journey with us</p>
+                    <form class="travel-enquiry-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control travel-form-input" placeholder="Name*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control travel-form-input" placeholder="Email*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control travel-form-input" placeholder="Mobile*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="date" class="form-control travel-form-input" placeholder="Date*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="number" class="form-control travel-form-input" placeholder="No of travellers*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control travel-form-input" placeholder="Destination*" value="Almaty, Kazakhstan" required>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-danger travel-submit-btn" style="background-color: black; border-color: black;">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle custom backdrop -->
+    <script>
+        // Apply custom backdrop class when modal is shown
+        document.getElementById('travelEnquiryModal').addEventListener('shown.bs.modal', function () {
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) {
+                backdrop.classList.add('travel-enquiry-modal-backdrop');
+            }
+        });
+    </script> --}}
+
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> --}}
 
 
 

@@ -4,13 +4,13 @@
 
 <!-- Slick CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-<!-- Optional: Slick Theme -->
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
-<!-- jQuery (required by Slick) -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Slick JS -->
+
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
@@ -1615,8 +1615,8 @@
                                 </div>
                             </div>
 
-                            
-                             
+
+
         @endif
     </div>
 </div>
@@ -1824,7 +1824,7 @@
                             </div>
                         </div>
 
-                        
+
             {{-- You can add more static cards here if needed --}}
         </div>
     </div>
@@ -3114,7 +3114,7 @@
 
 {{-- hero part start js --}}
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    
+
 
 
 
