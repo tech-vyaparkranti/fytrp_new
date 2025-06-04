@@ -136,7 +136,28 @@ public function searchDestination(Request $request)
         ->orderBy('slide_sorting', 'asc') // Ascending order by slide_sorting
         ->get();       
          $choose_us=ChooseUsModel::where(ChooseUsModel::SLIDE_STATUS,ChooseUsModel::SLIDE_STATUS_LIVE)->get();
-        return view('about',$data,compact('partners','team','choose_us'));
+         $usp = USPModel::where('status', '1')->orderBy('slide_sorting', 'asc')->get();
+if ($usp->isEmpty()) {
+    $usp = collect([
+        (object)[
+            'usp_icon' => '🌟',
+            'usp_title' => 'Holistic Learning',
+            'usp_description' => 'Daily yoga, digital classes, and creative learning methods.',
+        ],
+        (object)[
+            'usp_icon' => '🏫',
+            'usp_title' => 'World-Class Infrastructure',
+            'usp_description' => 'Spacious classrooms and advanced laboratories.',
+        ],
+        (object)[
+            'usp_icon' => '🛡️',
+            'usp_title' => 'Safety First',
+            'usp_description' => '24/7 CCTV, GPS transport & clean drinking water.',
+        ],
+    ]);
+}
+
+        return view('about',$data,compact('partners','team','choose_us','usp'));
     }
 
     public function destination()

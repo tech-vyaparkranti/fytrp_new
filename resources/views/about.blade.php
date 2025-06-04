@@ -308,7 +308,7 @@ savings!</p>
 
     </style>
 
-    <section style="padding-top: 10px">
+   <section style="padding-top: 10px">
       <div class="container">
         <div class="cs_section_heading cs_style_1 text-center">
           <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">
@@ -320,76 +320,31 @@ savings!</p>
         </div>
 
         <!-- Swiper Container -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🌟</span>
-                  <h3 class="card-title-12 mb-3">Holistic Learning</h3>
-                  <p class="card-text-12 text-muted">
-                    Daily yoga, digital classes, and creative learning methods.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🏫</span>
-                  <h3 class="card-title-12 mb-3">World-Class Infrastructure</h3>
-                  <p class="card-text-12 text-muted">
-                    Spacious classrooms and advanced laboratories.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🛡️</span>
-                  <h3 class="card-title-12 mb-3">Safety First</h3>
-                  <p class="card-text-12 text-muted">
-                    24/7 CCTV, GPS transport & clean drinking water.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-15 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🛡️</span>
-                  <h3 class="card-title-12 mb-3">Safety First</h3>
-                  <p class="card-text-12 text-muted">
-                    24/7 CCTV, GPS transport & clean drinking water.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="swiper-slide">
-              <div class="card card-hover-12 feature-card-12 h-30 w-100">
-                <div class="card-body-12">
-                  <span class="feature-icon-12">🛡️</span>
-                  <h3 class="card-title-12 mb-3">Safety First</h3>
-                  <p class="card-text-12 text-muted">
-                    24/7 CCTV, GPS transport & clean drinking water.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Repeat as needed -->
+        <!-- Swiper Container -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    @foreach($usp as $item)
+      <div class="swiper-slide">
+        <div class="card card-hover-12 feature-card-12 h-15 w-100">
+          <div class="card-body-12">
+           <div class="feature-icon-12 text-center d-flex justify-content-center align-items-center" style="height: 60px;">
+    @if(isset($item->image))
+        <img src="{{ asset($item->image) }}" alt="USP Image" style="max-height: 80px; object-fit: contain;">
+    @else
+        <span style="font-size: 30px;">🌍</span>
+    @endif
+</div>
+            <h3 class="card-title-12 mb-3">{{ $item->heading_top ?? 'No Title' }}</h3>
+            <p class="card-text-12 text-muted">
+              {{ $item->heading_middle ?? 'No description available.' }}
+            </p>
           </div>
         </div>
+      </div>
+    @endforeach
+  </div>
+</div>
+
       </div>
     </section>
 
