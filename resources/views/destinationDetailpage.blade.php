@@ -4,6 +4,25 @@
 @section('meta_keywords', $homedestinations->meta_keyword)
 @section('content')
 
+@php
+    // Retrieve the element with 'Address' from the website_elements table
+    $addressElement = App\Models\WebSiteElements::where('element', 'Address')->first();
+    $emailElement = App\Models\WebSiteElements::where('element', 'Email')->first();
+    $phoneElement = App\Models\WebSiteElements::where('element', 'Contact_number')->first();
+    $Global_PresenceElement = App\Models\WebSiteElements::where('element', 'Global_Presence')->first();
+    $fb_link = App\Models\WebSiteElements::where('element', 'fb_link')->first();
+    $twitter_link = App\Models\WebSiteElements::where('element', 'twitter_link')->first();
+
+    $insta_link = App\Models\WebSiteElements::where('element', 'insta_link')->first();
+
+    $linkedin_link = App\Models\WebSiteElements::where('element', 'linkedin_link')->first();
+
+    $pintrest_link = App\Models\WebSiteElements::where('element', 'pintrest_link')->first();
+    $email = App\Models\WebSiteElements::where('element', 'Email')->first();
+
+
+
+@endphp
     <!-- Start Hero Section -->
     <x-hero subTitle='Modern & Beautiful' img='assets/images/destination_header_bg.jpeg' title='Popular Destination' />
     <!-- End Hero Section -->
@@ -63,11 +82,11 @@
                         <div class="need-one">
                         <h5 class="widget-title">Need Help?</h5>
                         <ul class="list-style-one">
-                            <li><i class="far fa-envelope"></i> <a
-                                    href="emilto:info@book365days.com"> &nbsp; info@book365days.com</a></li>
-                            <li><i class="fas fa-phone-volume"></i> <a href="callto:+91 9711 433 495"> &nbsp;  +91 9711 433 495</a></li>
+                            <li><i class="far fa-envelope"></i> <a href="mailto:{!! $email ? $email->element_details : 'dumy@gmail.com' !!}">
+    {!! $email ? $email->element_details : 'dumy@gmail.com' !!}</a></li>
+                            <li><i class="fas fa-phone-volume"></i> <a href="tel:+91{!! $phoneElement ? $phoneElement->element_details : '9711433495' !!}"</a></li>
                         </ul>
-                        </div>
+                        </div> 433 495
                     </div>
             </div>
           </aside>
