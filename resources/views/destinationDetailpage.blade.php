@@ -84,9 +84,9 @@
                         <ul class="list-style-one">
                             <li><i class="far fa-envelope"></i> <a href="mailto:{!! $email ? $email->element_details : 'dumy@gmail.com' !!}">
     {!! $email ? $email->element_details : 'dumy@gmail.com' !!}</a></li>
-                            <li><i class="fas fa-phone-volume"></i> <a href="tel:+91{!! $phoneElement ? $phoneElement->element_details : '9711433495' !!}"</a></li>
+                            <li><i class="fas fa-phone-volume"></i> <a href="tel:+91{!! $phoneElement ? $phoneElement->element_details : '9711433495' !!}">{!! $phoneElement ? $phoneElement->element_details : '9711433495' !!}</a></li>
                         </ul>
-                        </div> 433 495
+                        </div>
                     </div>
             </div>
           </aside>
