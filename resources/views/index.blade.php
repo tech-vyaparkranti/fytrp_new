@@ -2508,100 +2508,121 @@
 
 <!-- Start Testimonial Section -->
 <section class="cs_testimonial cs_slider cs_style_1">
-  <div class="cs_height_140 cs_height_lg_80"></div>
-  <div class="container cs_large">
-    <div class="row cs_gap_y_40">
-    <div class="col-lg-6">
-      <div class="cs_section_heading cs_style_1">
-        <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">TESTIMONIALS</h3>
-        <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0">Our Valuable Customers
-          Awesome Feedback</h2>
-      </div>
-      <div class="cs_height_20 cs_height_lg_20"></div>
-      <p class="cs_section_text mb-0">Completely reinvent worldwide testing procedures with cooperative initiatives to leverage existing excellent best practices with functional</p>
-      {{-- <div class="cs_height_40 cs_height_lg_30"></div> --}}
-      <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0" data-slides-per-view="responsive" data-xxs-slides="1" data-xs-slides="1" data-sm-slides="1" data-md-slides="1"
-        data-lg-slides="1" data-add-slides="1" style="height: fit-content">
-        <div class="cs_slider_wrapper" >
-          <div class="slick_slide_in">
-            <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
-              <div class="cs_feedback_avatar">
-                <div class="cs_avatar_thumb cs_radius_5 overflow-hidden">
-                  <img src="https://cdn.pixabay.com/photo/2016/10/16/22/44/glass-ball-1746506_1280.jpg" alt="Avatar">
+    <div class="cs_height_140 cs_height_lg_80"></div>
+    <div class="container cs_large">
+        <div class="row cs_gap_y_40">
+            <div class="col-lg-6">
+                <div class="cs_section_heading cs_style_1">
+                    <h3 class="cs_section_title_up cs_ternary_font cs_accent_color cs_normal cs_fs_24">TESTIMONIALS</h3>
+                    <h2 class="cs_section_title cs_semibold cs_fs_56 mb-0">Our Valuable Customers
+                        Awesome Feedback</h2>
                 </div>
-                <div class="cs_avatar_info">
-                  <h3 class="cs_avatar_title cs_fs_24 cs_medium cs_secondary_font">Alexon Shen</h3>
-                  <p class="cs_avatar_subtitle cs_accent_color mb-0">Founder & CEO</p>
+                <div class="cs_height_20 cs_height_lg_20"></div>
+                <p class="cs_section_text mb-0">Completely reinvent worldwide testing procedures with cooperative initiatives to leverage existing excellent best practices with functional</p>
+                {{-- <div class="cs_height_40 cs_height_lg_30"></div> --}}
+                <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0" data-slides-per-view="responsive" data-xxs-slides="1" data-xs-slides="1" data-sm-slides="1" data-md-slides="1"
+                    data-lg-slides="1" data-add-slides="1" style="height: fit-content">
+                    <div class="cs_slider_wrapper" >
+                        @if ($testimonial->isNotEmpty())
+                            {{-- Loop through dynamic testimonials --}}
+                            @foreach ($testimonial as $items)
+                            <div class="slick_slide_in">
+                                <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
+                                    <div class="cs_feedback_avatar">
+                                        <div class="cs_avatar_thumb cs_radius_5 overflow-hidden">
+                                            {{-- IMPORTANT: Replace 'avatar_image' with the actual column name from your TestimonialModel for the image path --}}
+                                            {{-- Use asset() helper if your image path is relative to storage/app/public --}}
+                                           <img src="{{ asset($items->image) }}">                                            {{-- If avatar_image stores a full URL, just use: <img src="{{ $item->avatar_image }}" alt="..."> --}}
+                                        </div>
+                                        <div class="cs_avatar_info">
+                                            {{-- IMPORTANT: Replace 'name' and 'designation' with actual column names --}}
+                                            <h3 class="cs_avatar_title cs_fs_24 cs_medium cs_secondary_font">{{ $items->heading_bottom }}</h3>
+                                            <p class="cs_avatar_subtitle cs_accent_color mb-0">{{ $items->testimonial_city }}</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        {{-- IMPORTANT: Replace 'quote_text' and 'feedback_description' with actual column names --}}
+                                        <blockquote class="cs_fs_24 cs_medium cs_secondary_font cs_primary_color">“{{ $items->heading_top }}”</blockquote>
+                                        <p class="mb-0">{{ $items->heading_middle }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        @else
+                            {{-- Static Testimonials - displayed if $testimonial is empty or null --}}
+                            <div class="slick_slide_in">
+                                <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
+                                    <div class="cs_feedback_avatar">
+                                        <div class="cs_avatar_thumb cs_radius_5 overflow-hidden">
+                                            <img src="https://cdn.pixabay.com/photo/2016/10/16/22/44/glass-ball-1746506_1280.jpg" alt="Avatar">
+                                        </div>
+                                        <div class="cs_avatar_info">
+                                            <h3 class="cs_avatar_title cs_fs_24 cs_medium cs_secondary_font">Alexon Shen</h3>
+                                            <p class="cs_avatar_subtitle cs_accent_color mb-0">Founder & CEO</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <blockquote class="cs_fs_24 cs_medium cs_secondary_font cs_primary_color">“Quality Servies Good!”</blockquote>
+                                        <p class="mb-0">Completely reinvent worldwide testing new proceds with cooperative initiatives. Seemly leverage market excellent best practices chains</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick_slide_in">
+                                <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
+                                    <div class="cs_feedback_avatar">
+                                        <div class="cs_avatar_thumb cs_radius_5 overflow-hidden">
+                                            <img src="https://cdn.pixabay.com/photo/2015/09/05/05/24/landscape-923769_1280.jpg" alt="Avatar">
+                                        </div>
+                                        <div class="cs_avatar_info">
+                                            <h3 class="cs_avatar_title cs_fs_24 cs_medium cs_secondary_font">Alexon Shen</h3>
+                                            <p class="cs_avatar_subtitle cs_accent_color mb-0">Founder & CEO</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <blockquote class="cs_fs_24 cs_medium cs_secondary_font cs_primary_color">“Quality Servies Good!”</blockquote>
+                                        <p class="mb-0">Completely reinvent worldwide testing new proceds with cooperative initiatives. Seemly leverage market excellent best practices chains</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick_slide_in">
+                                <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
+                                    <div class="cs_feedback_avatar">
+                                        <div class="cs_avatar_thumb cs_radius_5 overflow-hidden">
+                                            <img src="assets/images/testimonial_avatar_2_1.jpeg" alt="Avatar">
+                                        </div>
+                                        <div class="cs_avatar_info">
+                                            <h3 class="cs_avatar_title cs_fs_24 cs_medium cs_secondary_font">Alexon Shen</h3>
+                                            <p class="cs_avatar_subtitle cs_accent_color mb-0">Founder & CEO</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <blockquote class="cs_fs_24 cs_medium cs_secondary_font cs_primary_color">“Quality Servies Good!”</blockquote>
+                                        <p class="mb-0">Completely reinvent worldwide testing new proceds with cooperative initiatives. Seemly leverage market excellent best practices chains</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="cs_pagination cs_style_1"></div>
                 </div>
-              </div>
-              <div>
-                <blockquote class="cs_fs_24 cs_medium cs_secondary_font cs_primary_color">“Quality Servies Good!”</blockquote>
-                <p class="mb-0">Completely reinvent worldwide testing new proceds with cooperative initiatives. Seemly leverage market excellent best practices chains</p>
-              </div>
             </div>
-          </div>
-          <div class="slick_slide_in">
-            <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
-              <div class="cs_feedback_avatar">
-                <div class="cs_avatar_thumb cs_radius_5 overflow-hidden">
-                  <img src="https://cdn.pixabay.com/photo/2015/09/05/05/24/landscape-923769_1280.jpg" alt="Avatar">
+            <div class="col-lg-6">
+                {{-- This video block appears to be static and is not affected by the testimonial data --}}
+                <div class="container">
+                    <div class="cs_video_block cs_style_12 cs_bg_filed position-relative" data-src="assets/images/video_block.jpeg">
+                        <a href="https://www.youtube.com/embed/eSUmkFPln_U" class="cs_player_btn cs_center cs_accent_bg cs_video_open">
+                            <svg width="40" height="47" viewBox="0 0 40 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9921 17.8114L9.63992 0.951019C7.66105 -0.267256 5.26855 -0.317908 3.23984 0.815524C1.21113 1.94878 0 4.01294 0 6.3367V39.9039C0 43.4175 2.83109 46.2914 6.31071 46.3104C6.32021 46.3104 6.32971 46.3105 6.33902 46.3105C7.42642 46.3104 8.55958 45.9696 9.61794 45.3238C10.4693 44.8043 10.7384 43.693 10.219 42.8417C9.69952 41.9902 8.58807 41.7212 7.73693 42.2407C7.2419 42.5426 6.75844 42.6988 6.33016 42.6987C5.01727 42.6916 3.61159 41.5669 3.61159 39.904V6.33679C3.61159 5.33994 4.13113 4.4547 5.00127 3.96853C5.87149 3.48236 6.89764 3.50407 7.74543 4.02606L35.0977 20.8864C35.9198 21.3926 36.3902 22.2366 36.3882 23.2021C36.3862 24.1674 35.9124 25.0095 35.0857 25.514L15.31 37.6224C14.4594 38.1432 14.192 39.2549 14.7128 40.1054C15.2335 40.956 16.3453 41.2234 17.1959 40.7026L36.9693 28.5956C38.8625 27.4407 39.9955 25.4272 40 23.2093C40.0045 20.9916 38.8797 18.9735 36.9921 17.8114Z" fill="currentColor" />
+                            </svg>
+                        </a>
+                        <h2 class="cs_video_title cs_fs_60 cs_semibold cs_white_color position-absolute mb-0">Our Journey <br> in Videos</h2>
+                        <span class="cs_location cs_fs_20 cs_white_color">
+                            <i class="fa-solid fa-location-dot"></i> Location Mountain Strait, Any State</span>
+                    </div>
                 </div>
-                <div class="cs_avatar_info">
-                  <h3 class="cs_avatar_title cs_fs_24 cs_medium cs_secondary_font">Alexon Shen</h3>
-                  <p class="cs_avatar_subtitle cs_accent_color mb-0">Founder & CEO</p>
-                </div>
-              </div>
-              <div>
-                <blockquote class="cs_fs_24 cs_medium cs_secondary_font cs_primary_color">“Quality Servies Good!”</blockquote>
-                <p class="mb-0">Completely reinvent worldwide testing new proceds with cooperative initiatives. Seemly leverage market excellent best practices chains</p>
-              </div>
             </div>
-          </div>
-          <div class="slick_slide_in">
-            <div class="cs_feedback cs_style_1 cs_radius_5 position-relative">
-              <div class="cs_feedback_avatar">
-                <div class="cs_avatar_thumb cs_radius_5 overflow-hidden">
-                  <img src="assets/images/testimonial_avatar_2_1.jpeg" alt="Avatar">
-                </div>
-                <div class="cs_avatar_info">
-                  <h3 class="cs_avatar_title cs_fs_24 cs_medium cs_secondary_font">Alexon Shen</h3>
-                  <p class="cs_avatar_subtitle cs_accent_color mb-0">Founder & CEO</p>
-                </div>
-              </div>
-              <div>
-                <blockquote class="cs_fs_24 cs_medium cs_secondary_font cs_primary_color">“Quality Servies Good!”</blockquote>
-                <p class="mb-0">Completely reinvent worldwide testing new proceds with cooperative initiatives. Seemly leverage market excellent best practices chains</p>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="cs_pagination cs_style_1"></div>
-      </div>
     </div>
-    <div class="col-lg-6">
-      {{-- <div class="cs_testimonial_thumb cs_radius_5 overflow-hidden position-relative">
-        <img src="https://cdn.pixabay.com/photo/2021/01/20/09/42/lake-5933622_1280.jpg" alt="Testimonial Thumb" class="w-100 h-100 object-fit-cover">
-        <div class="cs_shape_1 position-absolute"></div>
-        <div class="cs_shape_2 position-absolute">
-          <img src="assets/images/Quote.png" alt="Quote">
-        </div>
-      </div> --}}
-       {{-- <div class="cs_height_140 cs_height_lg_60"></div> --}}
-      <div class="container">
-        <div class="cs_video_block cs_style_12 cs_bg_filed position-relative" data-src="assets/images/video_block.jpeg">
-          <a href="https://www.youtube.com/embed/eSUmkFPln_U" class="cs_player_btn cs_center cs_accent_bg cs_video_open">
-            <svg width="40" height="47" viewBox="0 0 40 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.9921 17.8114L9.63992 0.951019C7.66105 -0.267256 5.26855 -0.317908 3.23984 0.815524C1.21113 1.94878 0 4.01294 0 6.3367V39.9039C0 43.4175 2.83109 46.2914 6.31071 46.3104C6.32021 46.3104 6.32971 46.3105 6.33902 46.3105C7.42642 46.3104 8.55958 45.9696 9.61794 45.3238C10.4693 44.8043 10.7384 43.693 10.219 42.8417C9.69952 41.9902 8.58807 41.7212 7.73693 42.2407C7.2419 42.5426 6.75844 42.6988 6.33016 42.6987C5.01727 42.6916 3.61159 41.5669 3.61159 39.904V6.33679C3.61159 5.33994 4.13113 4.4547 5.00127 3.96853C5.87149 3.48236 6.89764 3.50407 7.74543 4.02606L35.0977 20.8864C35.9198 21.3926 36.3902 22.2366 36.3882 23.2021C36.3862 24.1674 35.9124 25.0095 35.0857 25.514L15.31 37.6224C14.4594 38.1432 14.192 39.2549 14.7128 40.1054C15.2335 40.956 16.3453 41.2234 17.1959 40.7026L36.9693 28.5956C38.8625 27.4407 39.9955 25.4272 40 23.2093C40.0045 20.9916 38.8797 18.9735 36.9921 17.8114Z" fill="currentColor" />
-            </svg>
-          </a>
-          <h2 class="cs_video_title cs_fs_60 cs_semibold cs_white_color position-absolute mb-0">Our Journey <br> in Videos</h2>
-          <span class="cs_location cs_fs_20 cs_white_color">
-            <i class="fa-solid fa-location-dot"></i> Location Mountain Strait, Any State</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="cs_height_140 cs_height_lg_80"></div>
+    <div class="cs_height_140 cs_height_lg_80"></div>
 </section>
 
 
