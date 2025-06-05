@@ -19,6 +19,7 @@
 
 @endphp
 
+
 <footer class="cs_footer cs_style_1 cs_white_color cs_bg_filed cs_primary_bg" data-src="{{ asset('assets/images/footer_bg.jpeg') }}">
       <div class="cs_newsletter_1_wrap">
 
@@ -369,6 +370,73 @@
 
     }
 </style>
+
+<style>
+        /* Custom form styling */
+        .styled-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .form-control {
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .form-control:hover {
+            border-color: #dee2e6;
+        }
+
+        .btn-submit {
+            padding: 12px 40px;
+            border-radius: 25px;
+            background-color: #000;
+            border-color: #000;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #333;
+            border-color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-title {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Add some spacing between form rows */
+        .row.g-3 {
+            margin-bottom: 15px;
+        }
+
+        /* Style for required asterisk */
+        .required {
+            color: #dc3545;
+        }
+    </style>
 
 
 

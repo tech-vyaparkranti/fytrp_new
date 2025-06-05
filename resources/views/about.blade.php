@@ -20,9 +20,9 @@
             <div class="cs_about_text">
               <p data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">{!! $aboutus_content ??
                 'We specialize in furnishing exceptional trip gests acclimatized to your unique
-                                        requirements. Our platform of professional itineraries is devoted to making your trip as smooth,
-                                        instigative, and stress-free as possible. Whether you are planning a weekend flight, a family
-                                        holiday' !!}</p>
+                requirements. Our platform of professional itineraries is devoted to making your trip as smooth,
+                instigative, and stress-free as possible. Whether you are planning a weekend flight, a family
+                holiday' !!}</p>
               <p class="mb-0 cs_accent_color cs_medium cs_fs_18"data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">Speak to our Destination Experts at Direct Call <a href="tel:+91{!! $Contact_number ?? '+1 546 378 654' !!}">+91{!! $Contact_number ?? '+1 546 378 654' !!}</a> </p>
             </div>
             <ul class="cs_list cs_style_1 cs_mp0 cs_fs_18">
