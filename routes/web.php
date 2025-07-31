@@ -7,6 +7,10 @@ use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\EnquiryFormController;
 use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CheckoutController;
+
+
 
 
 Route::controller(HomeController::class)->group(function () {
@@ -51,6 +55,22 @@ Route::get('/comments', [CommentController::class, 'showComments'])->name('comme
 Route::post('subscribe-news-letter',[NewsLetterController::class,"subscribeNewsLetter"])->name("subscribeNewsLetter");
 
 Route::post('enquiry-form',[EnquiryFormController::class,"enquiryDetails"])->name("saveEnquiryFormData");
+
+Route::post('/store-booking', [BookingController::class, 'storeBooking'])->name('store.booking');
+Route::get('/payment/callback', [BookingController::class, 'handlePaymentCallback'])->name('payment.callback');
+
+Route::get('/payment-success', function () {
+    return view('payment-success');
+})->name('payment.success');
+
+Route::get('/payment-failure', function () {
+    return view('payment-failure');
+})->name('payment.failure');
+
+Route::get('/checkout/{booking}', [CheckoutController::class, 'showCheckoutPage'])->name('checkout');
+
+// Route to initiate payment (Pay Now)
+Route::post('/checkout/{booking}/paynow', [CheckoutController::class, 'initiatePayment'])->name('checkout.paynow');
 
 
 
