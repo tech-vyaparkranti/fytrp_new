@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Booking extends Model
 {
     use HasFactory;
+     protected $table = 'bookings_new';
 
     protected $fillable = [
         'full_name',
